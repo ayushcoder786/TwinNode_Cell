@@ -1,0 +1,368 @@
+{
+  "dataset_provenance": {
+    "status": "PASSED",
+    "total_records": 3604,
+    "real_hardware_samples": 2,
+    "simulation_samples": 3602,
+    "invalid_records": 444,
+    "duplicate_records": 0
+  },
+  "preprocessing": {
+    "status": "PASSED",
+    "canonical_features": [
+      "rolling_temp_mean",
+      "rolling_temp_std",
+      "temp_rate_of_change",
+      "rolling_dist_mean",
+      "dist_rate_of_change",
+      "target_temp_dev",
+      "target_dist_dev",
+      "latency_mean",
+      "packet_loss_rate",
+      "sensor_stability_score",
+      "response_delay",
+      "led_mismatch"
+    ],
+    "clean_summary": {
+      "initial_rows": 1000,
+      "final_rows": 926,
+      "duplicates_removed": 0,
+      "invalid_removed": 74,
+      "missing_per_column": {
+        "id": 0,
+        "timestamp": 0,
+        "node_id": 0,
+        "test_id": 0,
+        "temperature": 0,
+        "distance": 0,
+        "target_temperature": 0,
+        "target_distance": 0,
+        "temperature_error": 0,
+        "distance_error": 0,
+        "temperature_rate": 0,
+        "distance_rate": 0,
+        "response_delay_ms": 0,
+        "uart_latency_ms": 0,
+        "packet_sequence": 0,
+        "packet_loss": 0,
+        "sensor_validity": 0,
+        "led_command": 0,
+        "led_acknowledgement": 0,
+        "operating_mode": 0,
+        "condition_label": 0,
+        "data_source": 0,
+        "is_duplicate": 0
+      }
+    },
+    "outlier_summary": {
+      "method": "iqr",
+      "threshold": 1.5,
+      "columns_evaluated": [
+        "temperature",
+        "distance",
+        "uart_latency_ms",
+        "response_delay_ms"
+      ],
+      "outlier_counts": {
+        "temperature": 75,
+        "distance": 0,
+        "uart_latency_ms": 100,
+        "response_delay_ms": 100
+      },
+      "total_outliers": 275
+    },
+    "train_samples": 726,
+    "test_samples": 200,
+    "leakage_check": "ZERO_LEAKAGE_SESSION_DISJOINT"
+  },
+  "logistic_regression": {
+    "status": "COMPLETED",
+    "run_id": "RUN-20261030-194621-713b09",
+    "model_id": "MOD-20261030194621-LOGI",
+    "model_name": "Audit_LogisticRegression",
+    "algorithm": "LogisticRegression",
+    "training_time_ms": 188.73,
+    "training_samples": 2756,
+    "test_samples": 404,
+    "metrics": {
+      "accuracy": 0.755,
+      "precision_macro": 0.5027,
+      "recall_macro": 0.5442,
+      "f1_macro": 0.4609,
+      "f1_weighted": 0.8449,
+      "test_samples": 404,
+      "labels": [
+        "ACTUATOR_COMMAND_FAILURE",
+        "NORMAL_OPERATION",
+        "SENSOR_FAULT",
+        "UNEXPECTED_RESPONSE"
+      ],
+      "confusion_matrix": [
+        [
+          203,
+          95,
+          2,
+          0
+        ],
+        [
+          2,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          100
+        ]
+      ],
+      "classification_report": {
+        "ACTUATOR_COMMAND_FAILURE": {
+          "precision": 0.9902439024390244,
+          "recall": 0.6766666666666666,
+          "f1-score": 0.803960396039604,
+          "support": 300.0
+        },
+        "NORMAL_OPERATION": {
+          "precision": 0.020618556701030927,
+          "recall": 0.5,
+          "f1-score": 0.039603960396039604,
+          "support": 4.0
+        },
+        "SENSOR_FAULT": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "UNEXPECTED_RESPONSE": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 100.0
+        },
+        "accuracy": 0.754950495049505,
+        "macro avg": {
+          "precision": 0.5027156147850138,
+          "recall": 0.5441666666666667,
+          "f1-score": 0.4608910891089109,
+          "support": 404.0
+        },
+        "weighted avg": {
+          "precision": 0.9830585271250284,
+          "recall": 0.754950495049505,
+          "f1-score": 0.8449171649838252,
+          "support": 404.0
+        }
+      },
+      "feature_importance": {
+        "rolling_temp_mean": 2.3114,
+        "rolling_temp_std": 0.7972,
+        "temp_rate_of_change": 0.2772,
+        "rolling_dist_mean": 1.3504,
+        "dist_rate_of_change": 0.2492,
+        "target_temp_dev": 3.5679,
+        "target_dist_dev": 1.9385,
+        "latency_mean": 0.5047,
+        "packet_loss_rate": 0.5809,
+        "sensor_stability_score": 0.3022,
+        "response_delay": 0.7269,
+        "led_mismatch": 0.5307
+      },
+      "inference_latency_ms": 0.032
+    }
+  },
+  "random_forest": {
+    "status": "COMPLETED",
+    "run_id": "RUN-20261030-194622-04d4a5",
+    "model_id": "MOD-20261030194622-RAND",
+    "model_name": "Audit_RandomForest",
+    "algorithm": "RandomForest",
+    "training_time_ms": 320.27,
+    "training_samples": 2756,
+    "test_samples": 404,
+    "metrics": {
+      "accuracy": 0.995,
+      "precision_macro": 0.9978,
+      "recall_macro": 0.8333,
+      "f1_macro": 0.8878,
+      "f1_weighted": 0.9942,
+      "test_samples": 404,
+      "labels": [
+        "ACTUATOR_COMMAND_FAILURE",
+        "NORMAL_OPERATION",
+        "UNEXPECTED_RESPONSE"
+      ],
+      "confusion_matrix": [
+        [
+          300,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          0,
+          0,
+          100
+        ]
+      ],
+      "classification_report": {
+        "ACTUATOR_COMMAND_FAILURE": {
+          "precision": 0.9933774834437086,
+          "recall": 1.0,
+          "f1-score": 0.9966777408637874,
+          "support": 300.0
+        },
+        "NORMAL_OPERATION": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1-score": 0.6666666666666666,
+          "support": 4.0
+        },
+        "UNEXPECTED_RESPONSE": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 100.0
+        },
+        "accuracy": 0.995049504950495,
+        "macro avg": {
+          "precision": 0.9977924944812363,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.8877814691768181,
+          "support": 404.0
+        },
+        "weighted avg": {
+          "precision": 0.9950822896859223,
+          "recall": 0.995049504950495,
+          "f1-score": 0.9942326458559477,
+          "support": 404.0
+        }
+      },
+      "feature_importance": {
+        "rolling_temp_mean": 0.1443,
+        "rolling_temp_std": 0.0316,
+        "temp_rate_of_change": 0.0045,
+        "rolling_dist_mean": 0.1118,
+        "dist_rate_of_change": 0.0057,
+        "target_temp_dev": 0.2,
+        "target_dist_dev": 0.2335,
+        "latency_mean": 0.077,
+        "packet_loss_rate": 0.0707,
+        "sensor_stability_score": 0.0134,
+        "response_delay": 0.0979,
+        "led_mismatch": 0.0096
+      },
+      "inference_latency_ms": 0.144
+    }
+  },
+  "isolation_forest": {
+    "status": "COMPLETED",
+    "run_id": "RUN-20261030-194622-f1f655",
+    "model_id": "MOD-20261030194623-ISOL",
+    "model_name": "Audit_IsolationForest",
+    "algorithm": "IsolationForest",
+    "training_time_ms": 275.7,
+    "training_samples": 2756,
+    "test_samples": 404,
+    "metrics": {
+      "accuracy": 0.9356,
+      "anomaly_rate_pct": 6.44,
+      "test_samples": 404,
+      "inference_latency_ms": 0.5
+    }
+  },
+  "kmeans_pca": {
+    "n_clusters": 4,
+    "inertia": 2610.61,
+    "silhouette_score": 0.8026,
+    "total_variance_explained": 63.86,
+    "cluster_summary": {
+      "Cluster_0": {
+        "count": 827,
+        "percentage": 82.7
+      },
+      "Cluster_1": {
+        "count": 100,
+        "percentage": 10.0
+      },
+      "Cluster_3": {
+        "count": 49,
+        "percentage": 4.9
+      },
+      "Cluster_2": {
+        "count": 24,
+        "percentage": 2.4
+      }
+    }
+  },
+  "unseen_predictions": {
+    "status": "PASSED",
+    "sample_count": 10,
+    "predicted_classes": [
+      "ACTUATOR_COMMAND_FAILURE",
+      "ACTUATOR_COMMAND_FAILURE",
+      "ACTUATOR_COMMAND_FAILURE",
+      "ACTUATOR_COMMAND_FAILURE",
+      "ACTUATOR_COMMAND_FAILURE",
+      "ACTUATOR_COMMAND_FAILURE",
+      "ACTUATOR_COMMAND_FAILURE",
+      "ACTUATOR_COMMAND_FAILURE",
+      "ACTUATOR_COMMAND_FAILURE",
+      "ACTUATOR_COMMAND_FAILURE"
+    ]
+  },
+  "realtime_inference": {
+    "status": "SUCCESS",
+    "timestamp": "2026-10-30T19:46:23.957258+00:00",
+    "model_id": "MOD-20261030194622-RAND",
+    "model_version": "1.0.0",
+    "predicted_label": "NORMAL_OPERATION",
+    "confidence": 0.706,
+    "anomaly_score": 0.294,
+    "is_anomaly": false,
+    "suggested_led": "GREEN_ON",
+    "fault_type": "NOMINAL",
+    "recommended_action": "No action needed. System operating within nominal envelope.",
+    "layer1_fault": null,
+    "feature_snapshot": {
+      "temp": 24.5,
+      "dist": 24.9,
+      "uart_latency_ms": 5.0,
+      "data_source": "SIMULATION"
+    }
+  },
+  "safety_led_actuation": {
+    "status": "PASSED",
+    "nominal_led": "RED_ON",
+    "estop_override_led": "ALL_OFF",
+    "safety_hierarchy": "FIRMWARE_SAFETY_OVERRIDES_ML"
+  },
+  "api_verification": {
+    "GET /api/ml/models": 200,
+    "POST /api/ml/predict": 200,
+    "GET /api/ml/metrics": 200,
+    "GET /api/ml/feature-importance": 200,
+    "GET /api/ml/predictions": 200,
+    "GET /api/ml/dataset": 200,
+    "GET /api/ml/dataset/versions": 200,
+    "POST /api/ml/dataset/snapshot": 200,
+    "GET /api/ml/eda/summary": 200,
+    "GET /api/ml/eda/clustering": 200,
+    "GET /api/ml/eda/report-image": 200,
+    "POST /api/ml/actuate-led": 200,
+    "POST /api/ml/models/activate/MOD-20261030194622-RAND": 200,
+    "GET /api/ml/models/download/MOD-20261030194622-RAND": 200
+  }
+}

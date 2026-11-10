@@ -1,0 +1,283 @@
+{
+  "model_id": "MOD-20261030201848-LOGI",
+  "model_name": "TwinNode_LogisticRegression_1030_2018",
+  "model_version": "1.0.0",
+  "algorithm": "LogisticRegression",
+  "algorithm_type": "SUPERVISED",
+  "training_date": "2026-10-30T20:18:48.897043+00:00",
+  "dataset_version": "DS-LATEST",
+  "feature_list": [
+    "rolling_temp_mean",
+    "rolling_temp_std",
+    "temp_rate_of_change",
+    "rolling_dist_mean",
+    "dist_rate_of_change",
+    "target_temp_dev",
+    "target_dist_dev",
+    "latency_mean",
+    "packet_loss_rate",
+    "sensor_stability_score",
+    "response_delay",
+    "led_mismatch"
+  ],
+  "hyperparameters": {},
+  "metrics": {
+    "accuracy": 0.6488,
+    "precision_macro": 0.6809,
+    "recall_macro": 0.6135,
+    "f1_macro": 0.6092,
+    "f1_weighted": 0.6225,
+    "test_samples": 2241,
+    "labels": [
+      "ACTUATOR_COMMAND_FAILURE",
+      "COMMUNICATION_FAULT",
+      "NORMAL_OPERATION",
+      "SENSOR_FAULT",
+      "SETPOINT_DEVIATION",
+      "UNEXPECTED_RESPONSE"
+    ],
+    "confusion_matrix": [
+      [
+        156,
+        1,
+        189,
+        0,
+        0,
+        1
+      ],
+      [
+        0,
+        204,
+        65,
+        0,
+        0,
+        1
+      ],
+      [
+        23,
+        0,
+        385,
+        31,
+        2,
+        11
+      ],
+      [
+        0,
+        0,
+        82,
+        10,
+        194,
+        0
+      ],
+      [
+        1,
+        1,
+        107,
+        0,
+        394,
+        15
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        63,
+        305
+      ]
+    ],
+    "classification_report": {
+      "ACTUATOR_COMMAND_FAILURE": {
+        "precision": 0.8666666666666667,
+        "recall": 0.4495677233429395,
+        "f1-score": 0.5920303605313093,
+        "support": 347.0
+      },
+      "COMMUNICATION_FAULT": {
+        "precision": 0.9902912621359223,
+        "recall": 0.7555555555555555,
+        "f1-score": 0.8571428571428571,
+        "support": 270.0
+      },
+      "NORMAL_OPERATION": {
+        "precision": 0.46497584541062803,
+        "recall": 0.8517699115044248,
+        "f1-score": 0.6015625,
+        "support": 452.0
+      },
+      "SENSOR_FAULT": {
+        "precision": 0.24390243902439024,
+        "recall": 0.03496503496503497,
+        "f1-score": 0.06116207951070336,
+        "support": 286.0
+      },
+      "SETPOINT_DEVIATION": {
+        "precision": 0.6033690658499234,
+        "recall": 0.7606177606177607,
+        "f1-score": 0.672929120409906,
+        "support": 518.0
+      },
+      "UNEXPECTED_RESPONSE": {
+        "precision": 0.9159159159159159,
+        "recall": 0.8288043478260869,
+        "f1-score": 0.8701854493580599,
+        "support": 368.0
+      },
+      "accuracy": 0.6488174921909862,
+      "macro avg": {
+        "precision": 0.6808535325005743,
+        "recall": 0.613546722301967,
+        "f1-score": 0.6091687278254726,
+        "support": 2241.0
+      },
+      "weighted avg": {
+        "precision": 0.668290667989259,
+        "recall": 0.6488174921909862,
+        "f1-score": 0.6225199647519385,
+        "support": 2241.0
+      }
+    },
+    "feature_importance": {
+      "rolling_temp_mean": 0.8903,
+      "rolling_temp_std": 2.0418,
+      "temp_rate_of_change": 0.9365,
+      "rolling_dist_mean": 1.2882,
+      "dist_rate_of_change": 1.1329,
+      "target_temp_dev": 4.7466,
+      "target_dist_dev": 3.252,
+      "latency_mean": 0.8562,
+      "packet_loss_rate": 1.5064,
+      "sensor_stability_score": 0.8932,
+      "response_delay": 1.5769,
+      "led_mismatch": 1.0183
+    },
+    "inference_latency_ms": 0.008,
+    "split_report": {
+      "random_seed": 42,
+      "session_overlap": 0,
+      "total_sessions": 84,
+      "train_sessions_count": 56,
+      "val_sessions_count": 14,
+      "test_sessions_count": 14,
+      "train_samples": 12151,
+      "val_samples": 2133,
+      "test_samples": 2241,
+      "train_classes": {
+        "NORMAL_OPERATION": 3961,
+        "ACTUATOR_COMMAND_FAILURE": 1752,
+        "SENSOR_FAULT": 1674,
+        "COMMUNICATION_FAULT": 1653,
+        "UNEXPECTED_RESPONSE": 1633,
+        "SETPOINT_DEVIATION": 1478
+      },
+      "val_classes": {
+        "NORMAL_OPERATION": 573,
+        "COMMUNICATION_FAULT": 346,
+        "SENSOR_FAULT": 323,
+        "ACTUATOR_COMMAND_FAILURE": 304,
+        "UNEXPECTED_RESPONSE": 294,
+        "SETPOINT_DEVIATION": 293
+      },
+      "test_classes": {
+        "SETPOINT_DEVIATION": 518,
+        "NORMAL_OPERATION": 452,
+        "UNEXPECTED_RESPONSE": 368,
+        "ACTUATOR_COMMAND_FAILURE": 347,
+        "SENSOR_FAULT": 286,
+        "COMMUNICATION_FAULT": 270
+      },
+      "train_session_ids": [
+        1001,
+        2001,
+        2002,
+        2003,
+        2004,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2017,
+        2018,
+        9001,
+        9003,
+        9004,
+        9008,
+        9009,
+        9010,
+        9011,
+        9012,
+        9013,
+        9014,
+        9015,
+        9016,
+        9020,
+        9021,
+        9023,
+        9024,
+        9026,
+        9027,
+        9028,
+        9029,
+        9031,
+        9033,
+        9036,
+        9038,
+        9040,
+        9041,
+        9042,
+        9044,
+        9046,
+        9047,
+        9049,
+        9050,
+        9051,
+        9052,
+        9053,
+        9056,
+        9057,
+        9058,
+        9059,
+        9062
+      ],
+      "val_session_ids": [
+        2016,
+        9005,
+        9006,
+        9017,
+        9018,
+        9022,
+        9025,
+        9030,
+        9034,
+        9039,
+        9043,
+        9054,
+        9063,
+        9065
+      ],
+      "test_session_ids": [
+        2005,
+        2006,
+        9002,
+        9007,
+        9019,
+        9032,
+        9035,
+        9037,
+        9045,
+        9048,
+        9055,
+        9060,
+        9061,
+        9064
+      ]
+    }
+  },
+  "artifact_path": "D:\\College\\Sem-4\\TwinNode-Cell\\backend\\models\\saved\\MOD-20261030201848-LOGI.joblib",
+  "metadata_path": "D:\\College\\Sem-4\\TwinNode-Cell\\backend\\models\\metadata\\MOD-20261030201848-LOGI.json"
+}

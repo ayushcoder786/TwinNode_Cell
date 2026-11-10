@@ -1,0 +1,129 @@
+{
+  "active_profile": "STANDARD_INDUSTRIAL",
+  "profiles": {
+    "STANDARD_INDUSTRIAL": {
+      "name": "Standard Industrial Plant Profile",
+      "description": "Balanced sensitivity profile suitable for regular benchtop validation and testing.",
+      "conditions": {
+        "NORMAL_OPERATION": {
+          "enabled": true,
+          "severity": "OK",
+          "description": "System operating within all expected tolerances and timing constraints."
+        },
+        "SETPOINT_DEVIATION": {
+          "enabled": true,
+          "severity": "WARNING",
+          "description": "Actuator or measured sensor response deviates from target setpoint beyond configured tolerance band.",
+          "thresholds": {
+            "temperature_tolerance_c": 3.0,
+            "distance_tolerance_cm": 4.0,
+            "motor_speed_tolerance_pct": 10.0,
+            "servo_angle_tolerance_deg": 8.0,
+            "persistent_duration_ms": 1500
+          },
+          "recommended_action": "Check setpoint appropriateness, inspect actuator mechanical linkage, verify sensor calibration."
+        },
+        "ACTUATOR_RESPONSE_FAILURE": {
+          "enabled": true,
+          "severity": "CRITICAL",
+          "description": "Actuator failed to begin moving or change state within the acceptable time window after setpoint command.",
+          "thresholds": {
+            "max_response_time_ms": 1200,
+            "stall_current_detection": false,
+            "min_movement_threshold_deg": 2.0
+          },
+          "recommended_action": "Inspect L293D motor driver power supply (LM2596 buck converter 5V rail), motor wiring, and servo mechanical obstruction."
+        },
+        "SENSOR_OUT_OF_RANGE": {
+          "enabled": true,
+          "severity": "WARNING",
+          "description": "Physical sensor measurement falls outside realistic or safe operating boundaries.",
+          "thresholds": {
+            "temperature_min_c": 2.0,
+            "temperature_max_c": 90.0,
+            "distance_min_cm": 2.0,
+            "distance_max_cm": 400.0
+          },
+          "recommended_action": "Verify environmental temperature is within bounds, check if obstacle is closer than 2 cm deadband or beyond ultrasonic 400 cm range."
+        },
+        "SENSOR_DISCONNECTED_OR_INVALID": {
+          "enabled": true,
+          "severity": "CRITICAL",
+          "description": "Sensor output is floating, pinned to power rail (0V or 3.3V), or failing to respond (echo timeout).",
+          "thresholds": {
+            "lm35_disconnected_mv": 10.0,
+            "lm35_rail_short_mv": 3250.0,
+            "ultrasonic_timeout_count": 3
+          },
+          "recommended_action": "Check BSS138 level shifter wiring for HC-SR04, verify LM35 ground and VCC pins, inspect ADC jumper on PA0."
+        },
+        "COMMUNICATION_TIMEOUT": {
+          "enabled": true,
+          "severity": "CRITICAL",
+          "description": "Heartbeat or telemetry packet lost between Node 1 and Node 2, or between Host and Node 1.",
+          "thresholds": {
+            "inter_node_timeout_ms": 1500,
+            "host_timeout_ms": 2500,
+            "max_consecutive_drops": 3
+          },
+          "recommended_action": "Verify inter-node UART jumper wires (Node 1 PA9 to Node 2 PA10, Node 1 PA10 to Node 2 PA9, Common GND), check USB cable connection."
+        },
+        "UNEXPECTED_RESPONSE": {
+          "enabled": true,
+          "severity": "WARNING",
+          "description": "Actuator motion opposite to commanded direction or rapid erratic oscillation detected.",
+          "thresholds": {
+            "reverse_direction_samples": 2,
+            "jitter_threshold_deg": 15.0
+          },
+          "recommended_action": "Check L293D IN1/IN2 polarity wiring, check for electrical noise coupling on servo control wire."
+        },
+        "EMERGENCY_STOP": {
+          "enabled": true,
+          "severity": "CRITICAL",
+          "description": "Emergency stop line pulled or manual software abort invoked. Actuators forcibly de-energized.",
+          "thresholds": {
+            "latch_active": true,
+            "require_explicit_reset": true
+          },
+          "recommended_action": "Clear physical hazard, press Reset Faults on dashboard, and re-arm test sequence."
+        },
+        "EQ_15_09_PENDING": {
+          "enabled": false,
+          "severity": "WARNING",
+          "description": "Refer to eq15_09_condition.json. Pending engineering specification.",
+          "recommended_action": "Review specification document EQ-15-09 when released."
+        }
+      }
+    },
+    "SENSITIVE_BENCH": {
+      "name": "High Sensitivity Validation Profile",
+      "description": "Tighter tolerances for laboratory qualification and calibration.",
+      "conditions": {
+        "SETPOINT_DEVIATION": {
+          "enabled": true,
+          "severity": "WARNING",
+          "description": "Strict setpoint tolerance.",
+          "thresholds": {
+            "temperature_tolerance_c": 1.5,
+            "distance_tolerance_cm": 2.0,
+            "motor_speed_tolerance_pct": 5.0,
+            "servo_angle_tolerance_deg": 3.0,
+            "persistent_duration_ms": 800
+          },
+          "recommended_action": "Calibrate sensors and tune PWM PID/control parameters."
+        },
+        "ACTUATOR_RESPONSE_FAILURE": {
+          "enabled": true,
+          "severity": "CRITICAL",
+          "description": "Strict response time window.",
+          "thresholds": {
+            "max_response_time_ms": 600,
+            "min_movement_threshold_deg": 1.0
+          },
+          "recommended_action": "Inspect mechanical friction and battery voltage."
+        }
+      }
+    }
+  }
+}

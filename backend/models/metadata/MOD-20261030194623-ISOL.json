@@ -1,0 +1,32 @@
+{
+  "model_id": "MOD-20261030194623-ISOL",
+  "model_name": "Audit_IsolationForest",
+  "model_version": "1.0.0",
+  "algorithm": "IsolationForest",
+  "algorithm_type": "UNSUPERVISED",
+  "training_date": "2026-10-30T19:46:23.378878+00:00",
+  "dataset_version": "DS-LATEST",
+  "feature_list": [
+    "rolling_temp_mean",
+    "rolling_temp_std",
+    "temp_rate_of_change",
+    "rolling_dist_mean",
+    "dist_rate_of_change",
+    "target_temp_dev",
+    "target_dist_dev",
+    "latency_mean",
+    "packet_loss_rate",
+    "sensor_stability_score",
+    "response_delay",
+    "led_mismatch"
+  ],
+  "hyperparameters": {},
+  "metrics": {
+    "accuracy": 0.9356,
+    "anomaly_rate_pct": 6.44,
+    "test_samples": 404,
+    "inference_latency_ms": 0.5
+  },
+  "artifact_path": "D:\\College\\Sem-4\\TwinNode-Cell\\backend\\models\\saved\\MOD-20261030194623-ISOL.joblib",
+  "metadata_path": "D:\\College\\Sem-4\\TwinNode-Cell\\backend\\models\\metadata\\MOD-20261030194623-ISOL.json"
+}

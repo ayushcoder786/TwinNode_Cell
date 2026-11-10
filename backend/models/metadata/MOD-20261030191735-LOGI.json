@@ -1,0 +1,138 @@
+{
+  "model_id": "MOD-20261030191735-LOGI",
+  "model_name": "TwinNode_LogisticRegression_1030_1917",
+  "model_version": "1.0.0",
+  "algorithm": "LogisticRegression",
+  "algorithm_type": "SUPERVISED",
+  "training_date": "2026-10-30T19:17:35.629326+00:00",
+  "dataset_version": "DS-LATEST",
+  "feature_list": [
+    "rolling_temp_mean",
+    "rolling_temp_std",
+    "temp_rate_of_change",
+    "rolling_dist_mean",
+    "dist_rate_of_change",
+    "target_temp_dev",
+    "target_dist_dev",
+    "latency_mean",
+    "packet_loss_rate",
+    "sensor_stability_score",
+    "response_delay",
+    "led_mismatch"
+  ],
+  "hyperparameters": {},
+  "metrics": {
+    "accuracy": 0.6143,
+    "precision_macro": 0.776,
+    "recall_macro": 0.6312,
+    "f1_macro": 0.6672,
+    "f1_weighted": 0.7049,
+    "test_samples": 726,
+    "labels": [
+      "ACTUATOR_COMMAND_FAILURE",
+      "COMMUNICATION_FAULT",
+      "NORMAL_OPERATION",
+      "SENSOR_FAULT",
+      "UNEXPECTED_RESPONSE"
+    ],
+    "confusion_matrix": [
+      [
+        124,
+        0,
+        273,
+        3,
+        0
+      ],
+      [
+        0,
+        100,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        22,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        200
+      ]
+    ],
+    "classification_report": {
+      "ACTUATOR_COMMAND_FAILURE": {
+        "precision": 1.0,
+        "recall": 0.31,
+        "f1-score": 0.4732824427480916,
+        "support": 400.0
+      },
+      "COMMUNICATION_FAULT": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 100.0
+      },
+      "NORMAL_OPERATION": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "SENSOR_FAULT": {
+        "precision": 0.88,
+        "recall": 0.8461538461538461,
+        "f1-score": 0.8627450980392157,
+        "support": 26.0
+      },
+      "UNEXPECTED_RESPONSE": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 200.0
+      },
+      "accuracy": 0.6143250688705234,
+      "macro avg": {
+        "precision": 0.776,
+        "recall": 0.6312307692307693,
+        "f1-score": 0.6672055081574615,
+        "support": 726.0
+      },
+      "weighted avg": {
+        "precision": 0.9957024793388429,
+        "recall": 0.6143250688705234,
+        "f1-score": 0.7048820243088929,
+        "support": 726.0
+      }
+    },
+    "feature_importance": {
+      "rolling_temp_mean": 2.188,
+      "rolling_temp_std": 0.6702,
+      "temp_rate_of_change": 0.2709,
+      "rolling_dist_mean": 1.3315,
+      "dist_rate_of_change": 0.2466,
+      "target_temp_dev": 3.1554,
+      "target_dist_dev": 1.7289,
+      "latency_mean": 0.4808,
+      "packet_loss_rate": 0.5616,
+      "sensor_stability_score": 0.3225,
+      "response_delay": 0.7123,
+      "led_mismatch": 0.4892
+    },
+    "inference_latency_ms": 0.017
+  },
+  "artifact_path": "D:\\College\\Sem-4\\TwinNode-Cell\\backend\\models\\saved\\MOD-20261030191735-LOGI.joblib",
+  "metadata_path": "D:\\College\\Sem-4\\TwinNode-Cell\\backend\\models\\metadata\\MOD-20261030191735-LOGI.json"
+}

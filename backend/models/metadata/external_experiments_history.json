@@ -1,0 +1,1046 @@
+[
+  {
+    "experiment_id": "EXP-20261030221159-RAND",
+    "experiment_type": "EXTERNAL_BENCHMARK",
+    "dataset_id": "ton_iot_thermostat",
+    "dataset_name": "TON_IoT Smart Thermostat Telemetry",
+    "provenance": "PUBLIC_DATASET",
+    "algorithm": "RandomForest",
+    "split_method": "Stratified Holdout",
+    "train_samples": 12000,
+    "test_samples": 3000,
+    "train_classes": {
+      "1": 7994,
+      "0": 4006
+    },
+    "test_classes": {
+      "1": 1999,
+      "0": 1001
+    },
+    "features_used": [
+      "current_temperature",
+      "thermostat_status",
+      "type",
+      "current_temperature_rate"
+    ],
+    "target_column": "label",
+    "training_time_ms": 335.65,
+    "metrics": {
+      "algorithm_type": "SUPERVISED_CLASSIFICATION",
+      "accuracy": 1.0,
+      "precision_macro": 1.0,
+      "recall_macro": 1.0,
+      "f1_macro": 1.0,
+      "f1_weighted": 1.0,
+      "labels": [
+        "0",
+        "1"
+      ],
+      "confusion_matrix": [
+        [
+          1001,
+          0
+        ],
+        [
+          0,
+          1999
+        ]
+      ],
+      "classification_report": {
+        "0": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1001.0
+        },
+        "1": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1999.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 3000.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 3000.0
+        }
+      },
+      "feature_importance": {
+        "current_temperature": 0.001,
+        "thermostat_status": 0.0,
+        "type": 0.9966,
+        "current_temperature_rate": 0.0023
+      },
+      "inference_latency_ms": 0.0145
+    },
+    "model_artifact": "D:\\College\\Sem-4\\TwinNode-Cell\\backend\\models\\saved\\EXP-20261030221159-RAND.joblib",
+    "created_at": "2026-10-30T22:11:59.853050+00:00"
+  },
+  {
+    "experiment_id": "EXP-20261030211243-RAND",
+    "experiment_type": "EXTERNAL_BENCHMARK",
+    "dataset_id": "ton_iot_thermostat",
+    "dataset_name": "TON_IoT Smart Thermostat Telemetry",
+    "provenance": "PUBLIC_DATASET",
+    "algorithm": "RandomForest",
+    "split_method": "Stratified Holdout",
+    "train_samples": 12000,
+    "test_samples": 3000,
+    "train_classes": {
+      "1": 7994,
+      "0": 4006
+    },
+    "test_classes": {
+      "1": 1999,
+      "0": 1001
+    },
+    "features_used": [
+      "current_temperature",
+      "thermostat_status",
+      "type",
+      "current_temperature_rate"
+    ],
+    "target_column": "label",
+    "training_time_ms": 692.94,
+    "metrics": {
+      "algorithm_type": "SUPERVISED_CLASSIFICATION",
+      "accuracy": 1.0,
+      "precision_macro": 1.0,
+      "recall_macro": 1.0,
+      "f1_macro": 1.0,
+      "f1_weighted": 1.0,
+      "labels": [
+        "0",
+        "1"
+      ],
+      "confusion_matrix": [
+        [
+          1001,
+          0
+        ],
+        [
+          0,
+          1999
+        ]
+      ],
+      "classification_report": {
+        "0": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1001.0
+        },
+        "1": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1999.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 3000.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 3000.0
+        }
+      },
+      "feature_importance": {
+        "current_temperature": 0.001,
+        "thermostat_status": 0.0,
+        "type": 0.9966,
+        "current_temperature_rate": 0.0023
+      },
+      "inference_latency_ms": 0.0229
+    },
+    "model_artifact": "D:\\College\\Sem-4\\TwinNode-Cell\\backend\\models\\saved\\EXP-20261030211243-RAND.joblib",
+    "created_at": "2026-10-30T21:12:43.958099+00:00"
+  },
+  {
+    "experiment_id": "EXP-20261030211219-PCA",
+    "experiment_type": "EXTERNAL_BENCHMARK",
+    "dataset_id": "ton_iot_thermostat",
+    "dataset_name": "TON_IoT Smart Thermostat Telemetry",
+    "provenance": "PUBLIC_DATASET",
+    "algorithm": "PCA",
+    "split_method": "Stratified Holdout",
+    "train_samples": 12000,
+    "test_samples": 3000,
+    "train_classes": {
+      "1": 7994,
+      "0": 4006
+    },
+    "test_classes": {
+      "1": 1999,
+      "0": 1001
+    },
+    "features_used": [
+      "current_temperature",
+      "thermostat_status",
+      "type",
+      "current_temperature_rate"
+    ],
+    "target_column": "label",
+    "training_time_ms": 14.26,
+    "metrics": {
+      "algorithm_type": "DIMENSIONALITY_REDUCTION",
+      "n_components": 3,
+      "explained_variance_ratio": [
+        0.5927,
+        0.2219,
+        0.1033
+      ],
+      "total_variance_explained": 0.9179,
+      "inference_latency_ms": 0.0035
+    },
+    "model_artifact": "D:\\College\\Sem-4\\TwinNode-Cell\\backend\\models\\saved\\EXP-20261030211219-PCA.joblib",
+    "created_at": "2026-10-30T21:12:19.318045+00:00"
+  },
+  {
+    "experiment_id": "EXP-20261030211219-KMEA",
+    "experiment_type": "EXTERNAL_BENCHMARK",
+    "dataset_id": "ton_iot_thermostat",
+    "dataset_name": "TON_IoT Smart Thermostat Telemetry",
+    "provenance": "PUBLIC_DATASET",
+    "algorithm": "KMeans",
+    "split_method": "Stratified Holdout",
+    "train_samples": 12000,
+    "test_samples": 3000,
+    "train_classes": {
+      "1": 7994,
+      "0": 4006
+    },
+    "test_classes": {
+      "1": 1999,
+      "0": 1001
+    },
+    "features_used": [
+      "current_temperature",
+      "thermostat_status",
+      "type",
+      "current_temperature_rate"
+    ],
+    "target_column": "label",
+    "training_time_ms": 384.81,
+    "metrics": {
+      "algorithm_type": "CLUSTERING",
+      "n_clusters": 2,
+      "silhouette_score": 0.3484,
+      "cluster_distribution": {
+        "1": 1625,
+        "0": 1375
+      },
+      "inference_latency_ms": 0.0007
+    },
+    "model_artifact": "D:\\College\\Sem-4\\TwinNode-Cell\\backend\\models\\saved\\EXP-20261030211219-KMEA.joblib",
+    "created_at": "2026-10-30T21:12:19.185884+00:00"
+  },
+  {
+    "experiment_id": "EXP-20261030211218-ISOL",
+    "experiment_type": "EXTERNAL_BENCHMARK",
+    "dataset_id": "ton_iot_thermostat",
+    "dataset_name": "TON_IoT Smart Thermostat Telemetry",
+    "provenance": "PUBLIC_DATASET",
+    "algorithm": "IsolationForest",
+    "split_method": "Stratified Holdout",
+    "train_samples": 12000,
+    "test_samples": 3000,
+    "train_classes": {
+      "1": 7994,
+      "0": 4006
+    },
+    "test_classes": {
+      "1": 1999,
+      "0": 1001
+    },
+    "features_used": [
+      "current_temperature",
+      "thermostat_status",
+      "type",
+      "current_temperature_rate"
+    ],
+    "target_column": "label",
+    "training_time_ms": 709.91,
+    "metrics": {
+      "algorithm_type": "ANOMALY_DETECTION",
+      "anomaly_rate_pct": 5.1,
+      "anomalies_detected": 153,
+      "normal_retained": 2847,
+      "accuracy": 0.949,
+      "inference_latency_ms": 0.018
+    },
+    "model_artifact": "D:\\College\\Sem-4\\TwinNode-Cell\\backend\\models\\saved\\EXP-20261030211218-ISOL.joblib",
+    "created_at": "2026-10-30T21:12:18.488774+00:00"
+  },
+  {
+    "experiment_id": "EXP-20261030211217-SVM",
+    "experiment_type": "EXTERNAL_BENCHMARK",
+    "dataset_id": "ton_iot_thermostat",
+    "dataset_name": "TON_IoT Smart Thermostat Telemetry",
+    "provenance": "PUBLIC_DATASET",
+    "algorithm": "SVM",
+    "split_method": "Stratified Holdout",
+    "train_samples": 12000,
+    "test_samples": 3000,
+    "train_classes": {
+      "1": 7994,
+      "0": 4006
+    },
+    "test_classes": {
+      "1": 1999,
+      "0": 1001
+    },
+    "features_used": [
+      "current_temperature",
+      "thermostat_status",
+      "type",
+      "current_temperature_rate"
+    ],
+    "target_column": "label",
+    "training_time_ms": 2216.74,
+    "metrics": {
+      "algorithm_type": "SUPERVISED_CLASSIFICATION",
+      "accuracy": 1.0,
+      "precision_macro": 1.0,
+      "recall_macro": 1.0,
+      "f1_macro": 1.0,
+      "f1_weighted": 1.0,
+      "labels": [
+        "0",
+        "1"
+      ],
+      "confusion_matrix": [
+        [
+          1001,
+          0
+        ],
+        [
+          0,
+          1999
+        ]
+      ],
+      "classification_report": {
+        "0": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1001.0
+        },
+        "1": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1999.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 3000.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 3000.0
+        }
+      },
+      "feature_importance": {},
+      "inference_latency_ms": 0.0213
+    },
+    "model_artifact": "D:\\College\\Sem-4\\TwinNode-Cell\\backend\\models\\saved\\EXP-20261030211217-SVM.joblib",
+    "created_at": "2026-10-30T21:12:17.433347+00:00"
+  },
+  {
+    "experiment_id": "EXP-20261030211214-DECI",
+    "experiment_type": "EXTERNAL_BENCHMARK",
+    "dataset_id": "ton_iot_thermostat",
+    "dataset_name": "TON_IoT Smart Thermostat Telemetry",
+    "provenance": "PUBLIC_DATASET",
+    "algorithm": "DecisionTree",
+    "split_method": "Stratified Holdout",
+    "train_samples": 12000,
+    "test_samples": 3000,
+    "train_classes": {
+      "1": 7994,
+      "0": 4006
+    },
+    "test_classes": {
+      "1": 1999,
+      "0": 1001
+    },
+    "features_used": [
+      "current_temperature",
+      "thermostat_status",
+      "type",
+      "current_temperature_rate"
+    ],
+    "target_column": "label",
+    "training_time_ms": 73.06,
+    "metrics": {
+      "algorithm_type": "SUPERVISED_CLASSIFICATION",
+      "accuracy": 1.0,
+      "precision_macro": 1.0,
+      "recall_macro": 1.0,
+      "f1_macro": 1.0,
+      "f1_weighted": 1.0,
+      "labels": [
+        "0",
+        "1"
+      ],
+      "confusion_matrix": [
+        [
+          1001,
+          0
+        ],
+        [
+          0,
+          1999
+        ]
+      ],
+      "classification_report": {
+        "0": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1001.0
+        },
+        "1": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1999.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 3000.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 3000.0
+        }
+      },
+      "feature_importance": {
+        "current_temperature": 0.0,
+        "thermostat_status": 0.0,
+        "type": 1.0,
+        "current_temperature_rate": 0.0
+      },
+      "inference_latency_ms": 0.001
+    },
+    "model_artifact": "D:\\College\\Sem-4\\TwinNode-Cell\\backend\\models\\saved\\EXP-20261030211214-DECI.joblib",
+    "created_at": "2026-10-30T21:12:14.820675+00:00"
+  },
+  {
+    "experiment_id": "EXP-20261030211214-LOGI",
+    "experiment_type": "EXTERNAL_BENCHMARK",
+    "dataset_id": "ton_iot_thermostat",
+    "dataset_name": "TON_IoT Smart Thermostat Telemetry",
+    "provenance": "PUBLIC_DATASET",
+    "algorithm": "LogisticRegression",
+    "split_method": "Stratified Holdout",
+    "train_samples": 12000,
+    "test_samples": 3000,
+    "train_classes": {
+      "1": 7994,
+      "0": 4006
+    },
+    "test_classes": {
+      "1": 1999,
+      "0": 1001
+    },
+    "features_used": [
+      "current_temperature",
+      "thermostat_status",
+      "type",
+      "current_temperature_rate"
+    ],
+    "target_column": "label",
+    "training_time_ms": 69.74,
+    "metrics": {
+      "algorithm_type": "SUPERVISED_CLASSIFICATION",
+      "accuracy": 1.0,
+      "precision_macro": 1.0,
+      "recall_macro": 1.0,
+      "f1_macro": 1.0,
+      "f1_weighted": 1.0,
+      "labels": [
+        "0",
+        "1"
+      ],
+      "confusion_matrix": [
+        [
+          1001,
+          0
+        ],
+        [
+          0,
+          1999
+        ]
+      ],
+      "classification_report": {
+        "0": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1001.0
+        },
+        "1": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1999.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 3000.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 3000.0
+        }
+      },
+      "feature_importance": {
+        "current_temperature": 0.0287,
+        "thermostat_status": 0.0011,
+        "type": 13.2322,
+        "current_temperature_rate": 0.0145
+      },
+      "inference_latency_ms": 0.0009
+    },
+    "model_artifact": "D:\\College\\Sem-4\\TwinNode-Cell\\backend\\models\\saved\\EXP-20261030211214-LOGI.joblib",
+    "created_at": "2026-10-30T21:12:14.213609+00:00"
+  },
+  {
+    "experiment_id": "EXP-20261030210936-RAND",
+    "experiment_type": "EXTERNAL_BENCHMARK",
+    "dataset_id": "ton_iot_thermostat",
+    "dataset_name": "TON_IoT Smart Thermostat Telemetry",
+    "provenance": "PUBLIC_DATASET",
+    "algorithm": "RandomForest",
+    "split_method": "Stratified Holdout",
+    "train_samples": 12000,
+    "test_samples": 3000,
+    "train_classes": {
+      "1": 7994,
+      "0": 4006
+    },
+    "test_classes": {
+      "1": 1999,
+      "0": 1001
+    },
+    "features_used": [
+      "current_temperature",
+      "thermostat_status",
+      "type",
+      "current_temperature_rate"
+    ],
+    "target_column": "label",
+    "training_time_ms": 505.56,
+    "metrics": {
+      "algorithm_type": "SUPERVISED_CLASSIFICATION",
+      "accuracy": 1.0,
+      "precision_macro": 1.0,
+      "recall_macro": 1.0,
+      "f1_macro": 1.0,
+      "f1_weighted": 1.0,
+      "labels": [
+        "0",
+        "1"
+      ],
+      "confusion_matrix": [
+        [
+          1001,
+          0
+        ],
+        [
+          0,
+          1999
+        ]
+      ],
+      "classification_report": {
+        "0": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1001.0
+        },
+        "1": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1999.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 3000.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 3000.0
+        }
+      },
+      "feature_importance": {
+        "current_temperature": 0.001,
+        "thermostat_status": 0.0,
+        "type": 0.9966,
+        "current_temperature_rate": 0.0023
+      },
+      "inference_latency_ms": 0.0195
+    },
+    "model_artifact": "D:\\College\\Sem-4\\TwinNode-Cell\\backend\\models\\saved\\EXP-20261030210936-RAND.joblib",
+    "created_at": "2026-10-30T21:09:37.162160+00:00"
+  },
+  {
+    "experiment_id": "EXP-20261030210906-RAND",
+    "experiment_type": "EXTERNAL_BENCHMARK",
+    "dataset_id": "ton_iot_weather",
+    "dataset_name": "TON_IoT Weather Station Telemetry",
+    "provenance": "PUBLIC_DATASET",
+    "algorithm": "RandomForest",
+    "split_method": "Stratified Holdout",
+    "train_samples": 16000,
+    "test_samples": 4000,
+    "train_classes": {
+      "1": 12511,
+      "0": 3489
+    },
+    "test_classes": {
+      "1": 3128,
+      "0": 872
+    },
+    "features_used": [
+      "temperature",
+      "pressure",
+      "type",
+      "temperature_rate"
+    ],
+    "target_column": "label",
+    "training_time_ms": 559.54,
+    "metrics": {
+      "algorithm_type": "SUPERVISED_CLASSIFICATION",
+      "accuracy": 1.0,
+      "precision_macro": 1.0,
+      "recall_macro": 1.0,
+      "f1_macro": 1.0,
+      "f1_weighted": 1.0,
+      "labels": [
+        "0",
+        "1"
+      ],
+      "confusion_matrix": [
+        [
+          872,
+          0
+        ],
+        [
+          0,
+          3128
+        ]
+      ],
+      "classification_report": {
+        "0": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 872.0
+        },
+        "1": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 3128.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 4000.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 4000.0
+        }
+      },
+      "feature_importance": {
+        "temperature": 0.0218,
+        "pressure": 0.0922,
+        "type": 0.8763,
+        "temperature_rate": 0.0097
+      },
+      "inference_latency_ms": 0.0175
+    },
+    "model_artifact": "D:\\College\\Sem-4\\TwinNode-Cell\\backend\\models\\saved\\EXP-20261030210906-RAND.joblib",
+    "created_at": "2026-10-30T21:09:06.509532+00:00"
+  },
+  {
+    "experiment_id": "EXP-20261030210904-RAND",
+    "experiment_type": "EXTERNAL_BENCHMARK",
+    "dataset_id": "ton_iot_fridge",
+    "dataset_name": "TON_IoT Smart Fridge Telemetry",
+    "provenance": "PUBLIC_DATASET",
+    "algorithm": "RandomForest",
+    "split_method": "Stratified Holdout",
+    "train_samples": 16000,
+    "test_samples": 4000,
+    "train_classes": {
+      "1": 11951,
+      "0": 4049
+    },
+    "test_classes": {
+      "1": 2988,
+      "0": 1012
+    },
+    "features_used": [
+      "temp_condition",
+      "type",
+      "temp_condition_rate"
+    ],
+    "target_column": "label",
+    "training_time_ms": 476.74,
+    "metrics": {
+      "algorithm_type": "SUPERVISED_CLASSIFICATION",
+      "accuracy": 1.0,
+      "precision_macro": 1.0,
+      "recall_macro": 1.0,
+      "f1_macro": 1.0,
+      "f1_weighted": 1.0,
+      "labels": [
+        "0",
+        "1"
+      ],
+      "confusion_matrix": [
+        [
+          1012,
+          0
+        ],
+        [
+          0,
+          2988
+        ]
+      ],
+      "classification_report": {
+        "0": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1012.0
+        },
+        "1": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 2988.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 4000.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 4000.0
+        }
+      },
+      "feature_importance": {
+        "temp_condition": 0.269,
+        "type": 0.7153,
+        "temp_condition_rate": 0.0158
+      },
+      "inference_latency_ms": 0.018
+    },
+    "model_artifact": "D:\\College\\Sem-4\\TwinNode-Cell\\backend\\models\\saved\\EXP-20261030210904-RAND.joblib",
+    "created_at": "2026-10-30T21:09:04.538357+00:00"
+  },
+  {
+    "experiment_id": "EXP-20261030210332-RAND",
+    "experiment_type": "EXTERNAL_BENCHMARK",
+    "dataset_id": "ton_iot_thermostat",
+    "dataset_name": "TON_IoT Smart Thermostat Telemetry",
+    "provenance": "PUBLIC_DATASET",
+    "algorithm": "RandomForest",
+    "split_method": "Stratified Holdout",
+    "train_samples": 12000,
+    "test_samples": 3000,
+    "train_classes": {
+      "1": 7994,
+      "0": 4006
+    },
+    "test_classes": {
+      "1": 1999,
+      "0": 1001
+    },
+    "features_used": [
+      "current_temperature",
+      "thermostat_status",
+      "type",
+      "current_temperature_rate"
+    ],
+    "target_column": "label",
+    "training_time_ms": 478.77,
+    "metrics": {
+      "algorithm_type": "SUPERVISED_CLASSIFICATION",
+      "accuracy": 1.0,
+      "precision_macro": 1.0,
+      "recall_macro": 1.0,
+      "f1_macro": 1.0,
+      "f1_weighted": 1.0,
+      "labels": [
+        "0",
+        "1"
+      ],
+      "confusion_matrix": [
+        [
+          1001,
+          0
+        ],
+        [
+          0,
+          1999
+        ]
+      ],
+      "classification_report": {
+        "0": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1001.0
+        },
+        "1": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1999.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 3000.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 3000.0
+        }
+      },
+      "feature_importance": {
+        "current_temperature": 0.001,
+        "thermostat_status": 0.0,
+        "type": 0.9966,
+        "current_temperature_rate": 0.0023
+      },
+      "inference_latency_ms": 0.0199
+    },
+    "model_artifact": "D:\\College\\Sem-4\\TwinNode-Cell\\backend\\models\\saved\\EXP-20261030210332-RAND.joblib",
+    "created_at": "2026-10-30T21:03:32.616163+00:00"
+  },
+  {
+    "experiment_id": "EXP-20261030210308-RAND",
+    "experiment_type": "EXTERNAL_BENCHMARK",
+    "dataset_id": "ton_iot_thermostat",
+    "dataset_name": "TON_IoT Smart Thermostat Telemetry",
+    "provenance": "PUBLIC_DATASET",
+    "algorithm": "RandomForest",
+    "split_method": "Stratified Holdout",
+    "train_samples": 12000,
+    "test_samples": 3000,
+    "train_classes": {
+      "1": 7994,
+      "0": 4006
+    },
+    "test_classes": {
+      "1": 1999,
+      "0": 1001
+    },
+    "features_used": [
+      "current_temperature",
+      "thermostat_status",
+      "type",
+      "current_temperature_rate"
+    ],
+    "target_column": "label",
+    "training_time_ms": 445.85,
+    "metrics": {
+      "algorithm_type": "SUPERVISED_CLASSIFICATION",
+      "accuracy": 1.0,
+      "precision_macro": 1.0,
+      "recall_macro": 1.0,
+      "f1_macro": 1.0,
+      "f1_weighted": 1.0,
+      "labels": [
+        "0",
+        "1"
+      ],
+      "confusion_matrix": [
+        [
+          1001,
+          0
+        ],
+        [
+          0,
+          1999
+        ]
+      ],
+      "classification_report": {
+        "0": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1001.0
+        },
+        "1": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1999.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 3000.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 3000.0
+        }
+      },
+      "feature_importance": {
+        "current_temperature": 0.001,
+        "thermostat_status": 0.0,
+        "type": 0.9966,
+        "current_temperature_rate": 0.0023
+      },
+      "inference_latency_ms": 0.0188
+    },
+    "model_artifact": "D:\\College\\Sem-4\\TwinNode-Cell\\backend\\models\\saved\\EXP-20261030210308-RAND.joblib",
+    "created_at": "2026-10-30T21:03:08.850111+00:00"
+  },
+  {
+    "experiment_id": "EXP-20261030210210-RAND",
+    "experiment_type": "EXTERNAL_BENCHMARK",
+    "dataset_id": "ton_iot_thermostat",
+    "dataset_name": "TON_IoT Smart Thermostat Telemetry",
+    "provenance": "PUBLIC_DATASET",
+    "algorithm": "RandomForest",
+    "split_method": "Stratified Holdout",
+    "train_samples": 12000,
+    "test_samples": 3000,
+    "train_classes": {
+      "1": 7994,
+      "0": 4006
+    },
+    "test_classes": {
+      "1": 1999,
+      "0": 1001
+    },
+    "features_used": [
+      "current_temperature",
+      "thermostat_status",
+      "type",
+      "current_temperature_rate"
+    ],
+    "target_column": "label",
+    "training_time_ms": 784.16,
+    "metrics": {
+      "algorithm_type": "SUPERVISED_CLASSIFICATION",
+      "accuracy": 1.0,
+      "precision_macro": 1.0,
+      "recall_macro": 1.0,
+      "f1_macro": 1.0,
+      "f1_weighted": 1.0,
+      "labels": [
+        "0",
+        "1"
+      ],
+      "confusion_matrix": [
+        [
+          1001,
+          0
+        ],
+        [
+          0,
+          1999
+        ]
+      ],
+      "classification_report": {
+        "0": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1001.0
+        },
+        "1": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 1999.0
+        },
+        "accuracy": 1.0,
+        "macro avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 3000.0
+        },
+        "weighted avg": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 3000.0
+        }
+      },
+      "feature_importance": {
+        "current_temperature": 0.001,
+        "thermostat_status": 0.0,
+        "type": 0.9966,
+        "current_temperature_rate": 0.0023
+      },
+      "inference_latency_ms": 0.028
+    },
+    "model_artifact": "D:\\College\\Sem-4\\TwinNode-Cell\\backend\\models\\saved\\EXP-20261030210210-RAND.joblib",
+    "created_at": "2026-10-30T21:02:11.063486+00:00"
+  }
+]

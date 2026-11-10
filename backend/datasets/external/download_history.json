@@ -1,0 +1,101 @@
+[
+  {
+    "event_type": "MANUAL_IMPORT",
+    "dataset_id": "swat_water_treatment",
+    "filename": "SWaT_sample.csv",
+    "size_bytes": 52,
+    "sha256": "8965b51951a555443b9d823569afe8dfdaeb89afb3a3e6139a474d1d11e6a941",
+    "provenance": "PUBLIC_DATASET",
+    "timestamp": "2026-10-30T22:11:59.864181+00:00",
+    "status": "SUCCESS"
+  },
+  {
+    "event_type": "MANUAL_IMPORT",
+    "dataset_id": "swat_water_treatment",
+    "filename": "SWaT_sample.csv",
+    "size_bytes": 52,
+    "sha256": "8965b51951a555443b9d823569afe8dfdaeb89afb3a3e6139a474d1d11e6a941",
+    "provenance": "PUBLIC_DATASET",
+    "timestamp": "2026-10-30T21:12:43.972122+00:00",
+    "status": "SUCCESS"
+  },
+  {
+    "event_type": "MANUAL_IMPORT",
+    "dataset_id": "swat_water_treatment",
+    "filename": "SWaT_sample.csv",
+    "size_bytes": 52,
+    "sha256": "8965b51951a555443b9d823569afe8dfdaeb89afb3a3e6139a474d1d11e6a941",
+    "provenance": "PUBLIC_DATASET",
+    "timestamp": "2026-10-30T21:09:37.174511+00:00",
+    "status": "SUCCESS"
+  },
+  {
+    "event_type": "DOWNLOAD",
+    "download_id": "DL-20261030210847-0df444",
+    "dataset_id": "ton_iot_weather",
+    "dataset_name": "TON_IoT Weather Station Telemetry",
+    "filename": "Train_Test_IoT_Weather.csv",
+    "size_bytes": 2587701,
+    "sha256": "10c49fe8a6eae98db688e277e96218c9a9bf587cc5aee5962833470366dafdba",
+    "url": "https://huggingface.co/datasets/SilverDragon9/UNSW_TON-IoT_Train_Test_IoT_Datasets/resolve/main/Train_Test_IoT_Weather.csv",
+    "provenance": "PUBLIC_DATASET",
+    "timestamp": "2026-10-30T21:08:49.366455+00:00",
+    "status": "SUCCESS"
+  },
+  {
+    "event_type": "DOWNLOAD",
+    "download_id": "DL-20261030210847-331ea6",
+    "dataset_id": "ton_iot_fridge",
+    "dataset_name": "TON_IoT Smart Fridge Telemetry",
+    "filename": "Train_Test_IoT_Fridge.csv",
+    "size_bytes": 1678744,
+    "sha256": "56377a00b97204ea65f8912eadea9e626fe05d091f975f5be64c94c85efe3149",
+    "url": "https://huggingface.co/datasets/SilverDragon9/UNSW_TON-IoT_Train_Test_IoT_Datasets/resolve/main/Train_Test_IoT_Fridge.csv",
+    "provenance": "PUBLIC_DATASET",
+    "timestamp": "2026-10-30T21:08:48.780232+00:00",
+    "status": "SUCCESS"
+  },
+  {
+    "event_type": "MANUAL_IMPORT",
+    "dataset_id": "swat_water_treatment",
+    "filename": "SWaT_sample.csv",
+    "size_bytes": 52,
+    "sha256": "8965b51951a555443b9d823569afe8dfdaeb89afb3a3e6139a474d1d11e6a941",
+    "provenance": "PUBLIC_DATASET",
+    "timestamp": "2026-10-30T21:03:32.626722+00:00",
+    "status": "SUCCESS"
+  },
+  {
+    "event_type": "MANUAL_IMPORT",
+    "dataset_id": "swat_water_treatment",
+    "filename": "SWaT_sample.csv",
+    "size_bytes": 52,
+    "sha256": "8965b51951a555443b9d823569afe8dfdaeb89afb3a3e6139a474d1d11e6a941",
+    "provenance": "PUBLIC_DATASET",
+    "timestamp": "2026-10-30T21:03:08.861358+00:00",
+    "status": "SUCCESS"
+  },
+  {
+    "event_type": "MANUAL_IMPORT",
+    "dataset_id": "swat_water_treatment",
+    "filename": "SWaT_sample.csv",
+    "size_bytes": 52,
+    "sha256": "8965b51951a555443b9d823569afe8dfdaeb89afb3a3e6139a474d1d11e6a941",
+    "provenance": "PUBLIC_DATASET",
+    "timestamp": "2026-10-30T21:02:11.078009+00:00",
+    "status": "SUCCESS"
+  },
+  {
+    "event_type": "DOWNLOAD",
+    "download_id": "DL-20261030210203-da8c09",
+    "dataset_id": "ton_iot_thermostat",
+    "dataset_name": "TON_IoT Smart Thermostat Telemetry",
+    "filename": "Train_Test_IoT_Thermostat.csv",
+    "size_bytes": 1464768,
+    "sha256": "b475654a43ec885fd8c3409d9e85b7902ecc3ad47440948466f4fe3559fd1f6d",
+    "url": "https://huggingface.co/datasets/SilverDragon9/UNSW_TON-IoT_Train_Test_IoT_Datasets/resolve/main/Train_Test_IoT_Thermostat.csv",
+    "provenance": "PUBLIC_DATASET",
+    "timestamp": "2026-10-30T21:02:05.120763+00:00",
+    "status": "SUCCESS"
+  }
+]

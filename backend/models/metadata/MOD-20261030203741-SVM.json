@@ -1,0 +1,275 @@
+{
+  "model_id": "MOD-20261030203741-SVM",
+  "model_name": "TwinNode_SVM_1030_2037",
+  "model_version": "1.0.0",
+  "algorithm": "SVM",
+  "algorithm_type": "SUPERVISED",
+  "training_date": "2026-10-30T20:37:41.937266+00:00",
+  "dataset_version": "DS-LATEST",
+  "feature_list": [
+    "rolling_temp_mean",
+    "rolling_temp_std",
+    "temp_rate_of_change",
+    "rolling_dist_mean",
+    "dist_rate_of_change",
+    "target_temp_dev",
+    "target_dist_dev",
+    "latency_mean",
+    "packet_loss_rate",
+    "sensor_stability_score",
+    "response_delay",
+    "led_mismatch"
+  ],
+  "hyperparameters": {},
+  "metrics": {
+    "accuracy": 0.799,
+    "precision_macro": 0.9303,
+    "recall_macro": 0.724,
+    "f1_macro": 0.7539,
+    "f1_weighted": 0.7621,
+    "test_samples": 3094,
+    "labels": [
+      "ACTUATOR_COMMAND_FAILURE",
+      "COMMUNICATION_FAULT",
+      "NORMAL_OPERATION",
+      "SENSOR_FAULT",
+      "SETPOINT_DEVIATION",
+      "UNEXPECTED_RESPONSE"
+    ],
+    "confusion_matrix": [
+      [
+        33,
+        0,
+        364,
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        252,
+        80,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1320,
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        86,
+        260,
+        0,
+        4
+      ],
+      [
+        0,
+        0,
+        21,
+        3,
+        316,
+        6
+      ],
+      [
+        0,
+        1,
+        48,
+        0,
+        1,
+        291
+      ]
+    ],
+    "classification_report": {
+      "ACTUATOR_COMMAND_FAILURE": {
+        "precision": 0.9705882352941176,
+        "recall": 0.08270676691729323,
+        "f1-score": 0.15242494226327943,
+        "support": 399.0
+      },
+      "COMMUNICATION_FAULT": {
+        "precision": 0.9960474308300395,
+        "recall": 0.7544910179640718,
+        "f1-score": 0.858603066439523,
+        "support": 334.0
+      },
+      "NORMAL_OPERATION": {
+        "precision": 0.6878582595101616,
+        "recall": 0.9969788519637462,
+        "f1-score": 0.8140610545790934,
+        "support": 1324.0
+      },
+      "SENSOR_FAULT": {
+        "precision": 0.9701492537313433,
+        "recall": 0.7428571428571429,
+        "f1-score": 0.8414239482200647,
+        "support": 350.0
+      },
+      "SETPOINT_DEVIATION": {
+        "precision": 0.9968454258675079,
+        "recall": 0.9132947976878613,
+        "f1-score": 0.9532428355957768,
+        "support": 346.0
+      },
+      "UNEXPECTED_RESPONSE": {
+        "precision": 0.9603960396039604,
+        "recall": 0.8533724340175953,
+        "f1-score": 0.9037267080745341,
+        "support": 341.0
+      },
+      "accuracy": 0.7989657401422108,
+      "macro avg": {
+        "precision": 0.930314107472855,
+        "recall": 0.7239501685679518,
+        "f1-score": 0.7539137591953785,
+        "support": 3094.0
+      },
+      "weighted avg": {
+        "precision": 0.8541126984589912,
+        "recall": 0.7989657401422108,
+        "f1-score": 0.7620875962712174,
+        "support": 3094.0
+      }
+    },
+    "feature_importance": {},
+    "inference_latency_ms": 0.626,
+    "split_report": {
+      "method": "StratifiedGroupKFold",
+      "random_seed": 42,
+      "n_splits": 6,
+      "session_overlap": 0,
+      "zero_leakage_verified": true,
+      "all_classes_represented": true,
+      "class_representation_warnings": [],
+      "total_sessions": 84,
+      "train_sessions_count": 60,
+      "val_sessions_count": 15,
+      "test_sessions_count": 9,
+      "train_samples": 10691,
+      "val_samples": 2740,
+      "test_samples": 3094,
+      "train_classes": {
+        "NORMAL_OPERATION": 2940,
+        "UNEXPECTED_RESPONSE": 1601,
+        "SENSOR_FAULT": 1580,
+        "ACTUATOR_COMMAND_FAILURE": 1539,
+        "SETPOINT_DEVIATION": 1529,
+        "COMMUNICATION_FAULT": 1502
+      },
+      "val_classes": {
+        "NORMAL_OPERATION": 722,
+        "ACTUATOR_COMMAND_FAILURE": 465,
+        "COMMUNICATION_FAULT": 433,
+        "SETPOINT_DEVIATION": 414,
+        "UNEXPECTED_RESPONSE": 353,
+        "SENSOR_FAULT": 353
+      },
+      "test_classes": {
+        "NORMAL_OPERATION": 1324,
+        "ACTUATOR_COMMAND_FAILURE": 399,
+        "SENSOR_FAULT": 350,
+        "SETPOINT_DEVIATION": 346,
+        "UNEXPECTED_RESPONSE": 341,
+        "COMMUNICATION_FAULT": 334
+      },
+      "train_session_ids": [
+        2001,
+        2002,
+        2004,
+        2006,
+        2007,
+        2008,
+        2009,
+        2011,
+        2012,
+        2013,
+        2016,
+        2017,
+        2018,
+        9001,
+        9002,
+        9003,
+        9004,
+        9005,
+        9008,
+        9009,
+        9010,
+        9011,
+        9013,
+        9015,
+        9017,
+        9018,
+        9020,
+        9021,
+        9023,
+        9024,
+        9025,
+        9027,
+        9029,
+        9030,
+        9031,
+        9032,
+        9033,
+        9034,
+        9035,
+        9036,
+        9037,
+        9039,
+        9040,
+        9041,
+        9042,
+        9046,
+        9047,
+        9049,
+        9050,
+        9052,
+        9053,
+        9054,
+        9055,
+        9056,
+        9057,
+        9061,
+        9062,
+        9063,
+        9064,
+        9065
+      ],
+      "val_session_ids": [
+        2003,
+        2005,
+        2010,
+        9007,
+        9012,
+        9022,
+        9026,
+        9038,
+        9044,
+        9045,
+        9048,
+        9051,
+        9058,
+        9059,
+        9060
+      ],
+      "test_session_ids": [
+        1001,
+        2014,
+        2015,
+        9006,
+        9014,
+        9016,
+        9019,
+        9028,
+        9043
+      ]
+    }
+  },
+  "artifact_path": "D:\\College\\Sem-4\\TwinNode-Cell\\backend\\models\\saved\\MOD-20261030203741-SVM.joblib",
+  "metadata_path": "D:\\College\\Sem-4\\TwinNode-Cell\\backend\\models\\metadata\\MOD-20261030203741-SVM.json"
+}

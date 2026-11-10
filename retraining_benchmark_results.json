@@ -1,0 +1,590 @@
+[
+  {
+    "model_id": "MOD-20261030203646-RAND",
+    "model_name": "TwinNode_RandomForest_1030_2036",
+    "algorithm": "RandomForest",
+    "training_samples": 10691,
+    "test_samples": 3094,
+    "accuracy": 0.8568,
+    "precision_macro": 0.9155,
+    "recall_macro": 0.8031,
+    "f1_macro": 0.829,
+    "f1_weighted": 0.8423,
+    "inference_latency_ms": 0.026,
+    "labels": [
+      "ACTUATOR_COMMAND_FAILURE",
+      "COMMUNICATION_FAULT",
+      "NORMAL_OPERATION",
+      "SENSOR_FAULT",
+      "SETPOINT_DEVIATION",
+      "UNEXPECTED_RESPONSE"
+    ],
+    "confusion_matrix": [
+      [
+        139,
+        0,
+        260,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        254,
+        29,
+        50,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1320,
+        4,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        23,
+        324,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        17,
+        321,
+        4
+      ],
+      [
+        3,
+        0,
+        9,
+        36,
+        0,
+        293
+      ]
+    ],
+    "classification_report": {
+      "ACTUATOR_COMMAND_FAILURE": {
+        "precision": 0.952054794520548,
+        "recall": 0.3483709273182957,
+        "f1-score": 0.5100917431192661,
+        "support": 399.0
+      },
+      "COMMUNICATION_FAULT": {
+        "precision": 1.0,
+        "recall": 0.7604790419161677,
+        "f1-score": 0.8639455782312925,
+        "support": 334.0
+      },
+      "NORMAL_OPERATION": {
+        "precision": 0.8024316109422492,
+        "recall": 0.9969788519637462,
+        "f1-score": 0.8891882788817784,
+        "support": 1324.0
+      },
+      "SENSOR_FAULT": {
+        "precision": 0.7517401392111369,
+        "recall": 0.9257142857142857,
+        "f1-score": 0.8297055057618438,
+        "support": 350.0
+      },
+      "SETPOINT_DEVIATION": {
+        "precision": 1.0,
+        "recall": 0.9277456647398844,
+        "f1-score": 0.9625187406296851,
+        "support": 346.0
+      },
+      "UNEXPECTED_RESPONSE": {
+        "precision": 0.9865319865319865,
+        "recall": 0.8592375366568915,
+        "f1-score": 0.9184952978056427,
+        "support": 341.0
+      },
+      "accuracy": 0.856819650937298,
+      "macro avg": {
+        "precision": 0.9154597552009868,
+        "recall": 0.8030877180515451,
+        "f1-score": 0.828990857404918,
+        "support": 3094.0
+      },
+      "weighted avg": {
+        "precision": 0.8797045158476218,
+        "recall": 0.856819650937298,
+        "f1-score": 0.8422769934387699,
+        "support": 3094.0
+      }
+    },
+    "feature_importance": {
+      "rolling_temp_mean": 0.1114,
+      "rolling_temp_std": 0.0713,
+      "temp_rate_of_change": 0.0114,
+      "rolling_dist_mean": 0.1226,
+      "dist_rate_of_change": 0.011,
+      "target_temp_dev": 0.2305,
+      "target_dist_dev": 0.1825,
+      "latency_mean": 0.0755,
+      "packet_loss_rate": 0.0755,
+      "sensor_stability_score": 0.0519,
+      "response_delay": 0.0365,
+      "led_mismatch": 0.02
+    },
+    "split_info": {
+      "train_sessions": 60,
+      "val_sessions": 15,
+      "test_sessions": 9,
+      "session_overlap": 0,
+      "zero_leakage_verified": true,
+      "all_classes_represented": true
+    }
+  },
+  {
+    "model_id": "MOD-20261030203658-DECI",
+    "model_name": "TwinNode_DecisionTree_1030_2036",
+    "algorithm": "DecisionTree",
+    "training_samples": 10691,
+    "test_samples": 3094,
+    "accuracy": 0.861,
+    "precision_macro": 0.9194,
+    "recall_macro": 0.8093,
+    "f1_macro": 0.8289,
+    "f1_weighted": 0.8441,
+    "inference_latency_ms": 0.007,
+    "labels": [
+      "ACTUATOR_COMMAND_FAILURE",
+      "COMMUNICATION_FAULT",
+      "NORMAL_OPERATION",
+      "SENSOR_FAULT",
+      "SETPOINT_DEVIATION",
+      "UNEXPECTED_RESPONSE"
+    ],
+    "confusion_matrix": [
+      [
+        135,
+        0,
+        261,
+        2,
+        0,
+        1
+      ],
+      [
+        0,
+        240,
+        32,
+        50,
+        8,
+        4
+      ],
+      [
+        0,
+        0,
+        1320,
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        10,
+        339,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        341,
+        4
+      ],
+      [
+        0,
+        0,
+        2,
+        49,
+        1,
+        289
+      ]
+    ],
+    "classification_report": {
+      "ACTUATOR_COMMAND_FAILURE": {
+        "precision": 1.0,
+        "recall": 0.3383458646616541,
+        "f1-score": 0.5056179775280899,
+        "support": 399.0
+      },
+      "COMMUNICATION_FAULT": {
+        "precision": 1.0,
+        "recall": 0.718562874251497,
+        "f1-score": 0.8362369337979094,
+        "support": 334.0
+      },
+      "NORMAL_OPERATION": {
+        "precision": 0.8118081180811808,
+        "recall": 0.9969788519637462,
+        "f1-score": 0.8949152542372881,
+        "support": 1324.0
+      },
+      "SENSOR_FAULT": {
+        "precision": 0.7635135135135135,
+        "recall": 0.9685714285714285,
+        "f1-score": 0.853904282115869,
+        "support": 350.0
+      },
+      "SETPOINT_DEVIATION": {
+        "precision": 0.9742857142857143,
+        "recall": 0.9855491329479769,
+        "f1-score": 0.9798850574712644,
+        "support": 346.0
+      },
+      "UNEXPECTED_RESPONSE": {
+        "precision": 0.9665551839464883,
+        "recall": 0.8475073313782991,
+        "f1-score": 0.903125,
+        "support": 341.0
+      },
+      "accuracy": 0.861021331609567,
+      "macro avg": {
+        "precision": 0.9193604216378161,
+        "recall": 0.8092525806291002,
+        "f1-score": 0.8289474175250701,
+        "support": 3094.0
+      },
+      "weighted avg": {
+        "precision": 0.8861544450348489,
+        "recall": 0.861021331609567,
+        "f1-score": 0.8441450740652846,
+        "support": 3094.0
+      }
+    },
+    "feature_importance": {
+      "rolling_temp_mean": 0.0931,
+      "rolling_temp_std": 0.0067,
+      "temp_rate_of_change": 0.0,
+      "rolling_dist_mean": 0.1662,
+      "dist_rate_of_change": 0.0,
+      "target_temp_dev": 0.4208,
+      "target_dist_dev": 0.1185,
+      "latency_mean": 0.1715,
+      "packet_loss_rate": 0.0002,
+      "sensor_stability_score": 0.0205,
+      "response_delay": 0.0017,
+      "led_mismatch": 0.0008
+    },
+    "split_info": {
+      "train_sessions": 60,
+      "val_sessions": 15,
+      "test_sessions": 9,
+      "session_overlap": 0,
+      "zero_leakage_verified": true,
+      "all_classes_represented": true
+    }
+  },
+  {
+    "model_id": "MOD-20261030203710-LOGI",
+    "model_name": "TwinNode_LogisticRegression_1030_2037",
+    "algorithm": "LogisticRegression",
+    "training_samples": 10691,
+    "test_samples": 3094,
+    "accuracy": 0.7896,
+    "precision_macro": 0.9038,
+    "recall_macro": 0.7099,
+    "f1_macro": 0.74,
+    "f1_weighted": 0.7528,
+    "inference_latency_ms": 0.008,
+    "labels": [
+      "ACTUATOR_COMMAND_FAILURE",
+      "COMMUNICATION_FAULT",
+      "NORMAL_OPERATION",
+      "SENSOR_FAULT",
+      "SETPOINT_DEVIATION",
+      "UNEXPECTED_RESPONSE"
+    ],
+    "confusion_matrix": [
+      [
+        34,
+        0,
+        365,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        249,
+        80,
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1320,
+        4,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        87,
+        253,
+        4,
+        3
+      ],
+      [
+        0,
+        0,
+        21,
+        4,
+        297,
+        24
+      ],
+      [
+        0,
+        3,
+        47,
+        1,
+        0,
+        290
+      ]
+    ],
+    "classification_report": {
+      "ACTUATOR_COMMAND_FAILURE": {
+        "precision": 0.8947368421052632,
+        "recall": 0.08521303258145363,
+        "f1-score": 0.15560640732265446,
+        "support": 399.0
+      },
+      "COMMUNICATION_FAULT": {
+        "precision": 0.9880952380952381,
+        "recall": 0.7455089820359282,
+        "f1-score": 0.8498293515358362,
+        "support": 334.0
+      },
+      "NORMAL_OPERATION": {
+        "precision": 0.6875,
+        "recall": 0.9969788519637462,
+        "f1-score": 0.813810110974106,
+        "support": 1324.0
+      },
+      "SENSOR_FAULT": {
+        "precision": 0.9511278195488722,
+        "recall": 0.7228571428571429,
+        "f1-score": 0.8214285714285714,
+        "support": 350.0
+      },
+      "SETPOINT_DEVIATION": {
+        "precision": 0.9867109634551495,
+        "recall": 0.8583815028901735,
+        "f1-score": 0.9180834621329211,
+        "support": 346.0
+      },
+      "UNEXPECTED_RESPONSE": {
+        "precision": 0.9148264984227129,
+        "recall": 0.8504398826979472,
+        "f1-score": 0.8814589665653495,
+        "support": 341.0
+      },
+      "accuracy": 0.7895927601809954,
+      "macro avg": {
+        "precision": 0.9038328936045393,
+        "recall": 0.709896565837732,
+        "f1-score": 0.7400361449932397,
+        "support": 3094.0
+      },
+      "weighted avg": {
+        "precision": 0.8350117568466521,
+        "recall": 0.7895927601809954,
+        "f1-score": 0.752795388610601,
+        "support": 3094.0
+      }
+    },
+    "feature_importance": {
+      "rolling_temp_mean": 1.1612,
+      "rolling_temp_std": 1.6178,
+      "temp_rate_of_change": 0.6843,
+      "rolling_dist_mean": 1.397,
+      "dist_rate_of_change": 0.629,
+      "target_temp_dev": 4.7689,
+      "target_dist_dev": 3.4327,
+      "latency_mean": 0.2739,
+      "packet_loss_rate": 0.8784,
+      "sensor_stability_score": 0.8942,
+      "response_delay": 1.2239,
+      "led_mismatch": 0.7867
+    },
+    "split_info": {
+      "train_sessions": 60,
+      "val_sessions": 15,
+      "test_sessions": 9,
+      "session_overlap": 0,
+      "zero_leakage_verified": true,
+      "all_classes_represented": true
+    }
+  },
+  {
+    "model_id": "MOD-20261030203741-SVM",
+    "model_name": "TwinNode_SVM_1030_2037",
+    "algorithm": "SVM",
+    "training_samples": 10691,
+    "test_samples": 3094,
+    "accuracy": 0.799,
+    "precision_macro": 0.9303,
+    "recall_macro": 0.724,
+    "f1_macro": 0.7539,
+    "f1_weighted": 0.7621,
+    "inference_latency_ms": 0.626,
+    "labels": [
+      "ACTUATOR_COMMAND_FAILURE",
+      "COMMUNICATION_FAULT",
+      "NORMAL_OPERATION",
+      "SENSOR_FAULT",
+      "SETPOINT_DEVIATION",
+      "UNEXPECTED_RESPONSE"
+    ],
+    "confusion_matrix": [
+      [
+        33,
+        0,
+        364,
+        0,
+        0,
+        2
+      ],
+      [
+        1,
+        252,
+        80,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1320,
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        86,
+        260,
+        0,
+        4
+      ],
+      [
+        0,
+        0,
+        21,
+        3,
+        316,
+        6
+      ],
+      [
+        0,
+        1,
+        48,
+        0,
+        1,
+        291
+      ]
+    ],
+    "classification_report": {
+      "ACTUATOR_COMMAND_FAILURE": {
+        "precision": 0.9705882352941176,
+        "recall": 0.08270676691729323,
+        "f1-score": 0.15242494226327943,
+        "support": 399.0
+      },
+      "COMMUNICATION_FAULT": {
+        "precision": 0.9960474308300395,
+        "recall": 0.7544910179640718,
+        "f1-score": 0.858603066439523,
+        "support": 334.0
+      },
+      "NORMAL_OPERATION": {
+        "precision": 0.6878582595101616,
+        "recall": 0.9969788519637462,
+        "f1-score": 0.8140610545790934,
+        "support": 1324.0
+      },
+      "SENSOR_FAULT": {
+        "precision": 0.9701492537313433,
+        "recall": 0.7428571428571429,
+        "f1-score": 0.8414239482200647,
+        "support": 350.0
+      },
+      "SETPOINT_DEVIATION": {
+        "precision": 0.9968454258675079,
+        "recall": 0.9132947976878613,
+        "f1-score": 0.9532428355957768,
+        "support": 346.0
+      },
+      "UNEXPECTED_RESPONSE": {
+        "precision": 0.9603960396039604,
+        "recall": 0.8533724340175953,
+        "f1-score": 0.9037267080745341,
+        "support": 341.0
+      },
+      "accuracy": 0.7989657401422108,
+      "macro avg": {
+        "precision": 0.930314107472855,
+        "recall": 0.7239501685679518,
+        "f1-score": 0.7539137591953785,
+        "support": 3094.0
+      },
+      "weighted avg": {
+        "precision": 0.8541126984589912,
+        "recall": 0.7989657401422108,
+        "f1-score": 0.7620875962712174,
+        "support": 3094.0
+      }
+    },
+    "feature_importance": {},
+    "split_info": {
+      "train_sessions": 60,
+      "val_sessions": 15,
+      "test_sessions": 9,
+      "session_overlap": 0,
+      "zero_leakage_verified": true,
+      "all_classes_represented": true
+    }
+  },
+  {
+    "model_id": "MOD-20261030203754-ISOL",
+    "model_name": "TwinNode_IsolationForest_1030_2037",
+    "algorithm": "IsolationForest",
+    "training_samples": 10691,
+    "test_samples": 3094,
+    "accuracy": 0.9156,
+    "precision_macro": null,
+    "recall_macro": null,
+    "f1_macro": null,
+    "f1_weighted": null,
+    "inference_latency_ms": 0.5,
+    "labels": [],
+    "confusion_matrix": [],
+    "classification_report": {},
+    "feature_importance": {},
+    "split_info": {
+      "train_sessions": 60,
+      "val_sessions": 15,
+      "test_sessions": 9,
+      "session_overlap": 0,
+      "zero_leakage_verified": true,
+      "all_classes_represented": true
+    }
+  }
+]

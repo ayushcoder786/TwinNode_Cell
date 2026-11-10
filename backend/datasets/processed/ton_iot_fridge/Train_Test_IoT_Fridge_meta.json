@@ -1,0 +1,40 @@
+{
+  "dataset_id": "ton_iot_fridge",
+  "raw_file": "Train_Test_IoT_Fridge.csv",
+  "processed_file": "Train_Test_IoT_Fridge_processed.csv",
+  "initial_records": 39944,
+  "final_records": 37110,
+  "duplicates_removed": 2834,
+  "outliers_removed": 0,
+  "impute_strategy": "median",
+  "scaler_type": "standard",
+  "features_processed": [
+    "temp_condition",
+    "type"
+  ],
+  "target_column": "label",
+  "encoding_maps": {
+    "temp_condition": {
+      "high": 0,
+      "high ": 1,
+      "high  ": 2,
+      "low": 3,
+      "low ": 4,
+      "low  ": 5
+    },
+    "type": {
+      "backdoor": 0,
+      "ddos": 1,
+      "injection": 2,
+      "normal": 3,
+      "password": 4,
+      "ransomware": 5,
+      "xss": 6
+    }
+  },
+  "class_distribution": {
+    "1": 24828,
+    "0": 12282
+  },
+  "provenance": "PUBLIC_DATASET"
+}

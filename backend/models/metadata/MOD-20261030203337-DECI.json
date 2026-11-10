@@ -1,0 +1,288 @@
+{
+  "model_id": "MOD-20261030203337-DECI",
+  "model_name": "Test_DecisionTree_Model",
+  "model_version": "1.0.0",
+  "algorithm": "DecisionTree",
+  "algorithm_type": "SUPERVISED",
+  "training_date": "2026-10-30T20:33:37.792348+00:00",
+  "dataset_version": "DS-LATEST",
+  "feature_list": [
+    "rolling_temp_mean",
+    "rolling_temp_std",
+    "temp_rate_of_change",
+    "rolling_dist_mean",
+    "dist_rate_of_change",
+    "target_temp_dev",
+    "target_dist_dev",
+    "latency_mean",
+    "packet_loss_rate",
+    "sensor_stability_score",
+    "response_delay",
+    "led_mismatch"
+  ],
+  "hyperparameters": {},
+  "metrics": {
+    "accuracy": 0.861,
+    "precision_macro": 0.9194,
+    "recall_macro": 0.8093,
+    "f1_macro": 0.8289,
+    "f1_weighted": 0.8441,
+    "test_samples": 3094,
+    "labels": [
+      "ACTUATOR_COMMAND_FAILURE",
+      "COMMUNICATION_FAULT",
+      "NORMAL_OPERATION",
+      "SENSOR_FAULT",
+      "SETPOINT_DEVIATION",
+      "UNEXPECTED_RESPONSE"
+    ],
+    "confusion_matrix": [
+      [
+        135,
+        0,
+        261,
+        2,
+        0,
+        1
+      ],
+      [
+        0,
+        240,
+        32,
+        50,
+        8,
+        4
+      ],
+      [
+        0,
+        0,
+        1320,
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        10,
+        339,
+        0,
+        1
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        341,
+        4
+      ],
+      [
+        0,
+        0,
+        2,
+        49,
+        1,
+        289
+      ]
+    ],
+    "classification_report": {
+      "ACTUATOR_COMMAND_FAILURE": {
+        "precision": 1.0,
+        "recall": 0.3383458646616541,
+        "f1-score": 0.5056179775280899,
+        "support": 399.0
+      },
+      "COMMUNICATION_FAULT": {
+        "precision": 1.0,
+        "recall": 0.718562874251497,
+        "f1-score": 0.8362369337979094,
+        "support": 334.0
+      },
+      "NORMAL_OPERATION": {
+        "precision": 0.8118081180811808,
+        "recall": 0.9969788519637462,
+        "f1-score": 0.8949152542372881,
+        "support": 1324.0
+      },
+      "SENSOR_FAULT": {
+        "precision": 0.7635135135135135,
+        "recall": 0.9685714285714285,
+        "f1-score": 0.853904282115869,
+        "support": 350.0
+      },
+      "SETPOINT_DEVIATION": {
+        "precision": 0.9742857142857143,
+        "recall": 0.9855491329479769,
+        "f1-score": 0.9798850574712644,
+        "support": 346.0
+      },
+      "UNEXPECTED_RESPONSE": {
+        "precision": 0.9665551839464883,
+        "recall": 0.8475073313782991,
+        "f1-score": 0.903125,
+        "support": 341.0
+      },
+      "accuracy": 0.861021331609567,
+      "macro avg": {
+        "precision": 0.9193604216378161,
+        "recall": 0.8092525806291002,
+        "f1-score": 0.8289474175250701,
+        "support": 3094.0
+      },
+      "weighted avg": {
+        "precision": 0.8861544450348489,
+        "recall": 0.861021331609567,
+        "f1-score": 0.8441450740652846,
+        "support": 3094.0
+      }
+    },
+    "feature_importance": {
+      "rolling_temp_mean": 0.0931,
+      "rolling_temp_std": 0.0067,
+      "temp_rate_of_change": 0.0,
+      "rolling_dist_mean": 0.1662,
+      "dist_rate_of_change": 0.0,
+      "target_temp_dev": 0.4208,
+      "target_dist_dev": 0.1185,
+      "latency_mean": 0.1715,
+      "packet_loss_rate": 0.0002,
+      "sensor_stability_score": 0.0205,
+      "response_delay": 0.0017,
+      "led_mismatch": 0.0008
+    },
+    "inference_latency_ms": 0.009,
+    "split_report": {
+      "method": "StratifiedGroupKFold",
+      "random_seed": 42,
+      "n_splits": 6,
+      "session_overlap": 0,
+      "zero_leakage_verified": true,
+      "all_classes_represented": true,
+      "class_representation_warnings": [],
+      "total_sessions": 84,
+      "train_sessions_count": 60,
+      "val_sessions_count": 15,
+      "test_sessions_count": 9,
+      "train_samples": 10691,
+      "val_samples": 2740,
+      "test_samples": 3094,
+      "train_classes": {
+        "NORMAL_OPERATION": 2940,
+        "UNEXPECTED_RESPONSE": 1601,
+        "SENSOR_FAULT": 1580,
+        "ACTUATOR_COMMAND_FAILURE": 1539,
+        "SETPOINT_DEVIATION": 1529,
+        "COMMUNICATION_FAULT": 1502
+      },
+      "val_classes": {
+        "NORMAL_OPERATION": 722,
+        "ACTUATOR_COMMAND_FAILURE": 465,
+        "COMMUNICATION_FAULT": 433,
+        "SETPOINT_DEVIATION": 414,
+        "UNEXPECTED_RESPONSE": 353,
+        "SENSOR_FAULT": 353
+      },
+      "test_classes": {
+        "NORMAL_OPERATION": 1324,
+        "ACTUATOR_COMMAND_FAILURE": 399,
+        "SENSOR_FAULT": 350,
+        "SETPOINT_DEVIATION": 346,
+        "UNEXPECTED_RESPONSE": 341,
+        "COMMUNICATION_FAULT": 334
+      },
+      "train_session_ids": [
+        2001,
+        2002,
+        2004,
+        2006,
+        2007,
+        2008,
+        2009,
+        2011,
+        2012,
+        2013,
+        2016,
+        2017,
+        2018,
+        9001,
+        9002,
+        9003,
+        9004,
+        9005,
+        9008,
+        9009,
+        9010,
+        9011,
+        9013,
+        9015,
+        9017,
+        9018,
+        9020,
+        9021,
+        9023,
+        9024,
+        9025,
+        9027,
+        9029,
+        9030,
+        9031,
+        9032,
+        9033,
+        9034,
+        9035,
+        9036,
+        9037,
+        9039,
+        9040,
+        9041,
+        9042,
+        9046,
+        9047,
+        9049,
+        9050,
+        9052,
+        9053,
+        9054,
+        9055,
+        9056,
+        9057,
+        9061,
+        9062,
+        9063,
+        9064,
+        9065
+      ],
+      "val_session_ids": [
+        2003,
+        2005,
+        2010,
+        9007,
+        9012,
+        9022,
+        9026,
+        9038,
+        9044,
+        9045,
+        9048,
+        9051,
+        9058,
+        9059,
+        9060
+      ],
+      "test_session_ids": [
+        1001,
+        2014,
+        2015,
+        9006,
+        9014,
+        9016,
+        9019,
+        9028,
+        9043
+      ]
+    }
+  },
+  "artifact_path": "D:\\College\\Sem-4\\TwinNode-Cell\\backend\\models\\saved\\MOD-20261030203337-DECI.joblib",
+  "metadata_path": "D:\\College\\Sem-4\\TwinNode-Cell\\backend\\models\\metadata\\MOD-20261030203337-DECI.json"
+}

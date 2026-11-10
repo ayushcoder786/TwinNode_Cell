@@ -1,0 +1,120 @@
+{
+  "model_id": "MOD-20261030191638-RAND",
+  "model_name": "TwinNode_RandomForest_1030_1916",
+  "model_version": "1.0.0",
+  "algorithm": "RandomForest",
+  "algorithm_type": "SUPERVISED",
+  "training_date": "2026-10-30T19:16:38.191085+00:00",
+  "dataset_version": "DS-LATEST",
+  "feature_list": [
+    "rolling_temp_mean",
+    "rolling_temp_std",
+    "temp_rate_of_change",
+    "rolling_dist_mean",
+    "dist_rate_of_change",
+    "target_temp_dev",
+    "target_dist_dev",
+    "latency_mean",
+    "packet_loss_rate",
+    "sensor_stability_score",
+    "response_delay",
+    "led_mismatch"
+  ],
+  "hyperparameters": {},
+  "metrics": {
+    "accuracy": 0.25,
+    "precision_macro": 0.25,
+    "recall_macro": 0.25,
+    "f1_macro": 0.25,
+    "f1_weighted": 0.25,
+    "test_samples": 400,
+    "labels": [
+      "ACTUATOR_COMMAND_FAILURE",
+      "NORMAL_OPERATION",
+      "SENSOR_FAULT",
+      "UNEXPECTED_RESPONSE"
+    ],
+    "confusion_matrix": [
+      [
+        0,
+        296,
+        4,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        100
+      ]
+    ],
+    "classification_report": {
+      "ACTUATOR_COMMAND_FAILURE": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 300.0
+      },
+      "NORMAL_OPERATION": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "SENSOR_FAULT": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "UNEXPECTED_RESPONSE": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 100.0
+      },
+      "accuracy": 0.25,
+      "macro avg": {
+        "precision": 0.25,
+        "recall": 0.25,
+        "f1-score": 0.25,
+        "support": 400.0
+      },
+      "weighted avg": {
+        "precision": 0.25,
+        "recall": 0.25,
+        "f1-score": 0.25,
+        "support": 400.0
+      }
+    },
+    "feature_importance": {
+      "rolling_temp_mean": 0.1127,
+      "rolling_temp_std": 0.0342,
+      "temp_rate_of_change": 0.0048,
+      "rolling_dist_mean": 0.0957,
+      "dist_rate_of_change": 0.0044,
+      "target_temp_dev": 0.1935,
+      "target_dist_dev": 0.2344,
+      "latency_mean": 0.0823,
+      "packet_loss_rate": 0.0972,
+      "sensor_stability_score": 0.0173,
+      "response_delay": 0.117,
+      "led_mismatch": 0.0066
+    },
+    "inference_latency_ms": 0.132
+  },
+  "artifact_path": "D:\\College\\Sem-4\\TwinNode-Cell\\backend\\models\\saved\\MOD-20261030191638-RAND.joblib",
+  "metadata_path": "D:\\College\\Sem-4\\TwinNode-Cell\\backend\\models\\metadata\\MOD-20261030191638-RAND.json"
+}

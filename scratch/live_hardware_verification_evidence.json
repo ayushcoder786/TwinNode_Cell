@@ -1,0 +1,366 @@
+{
+  "test1_connect_success": true,
+  "test1_port": "COM3",
+  "test1_baudrate": 115200,
+  "test1_is_connected": true,
+  "test1_status": {
+    "is_connected": true,
+    "is_reconnecting": false,
+    "port": "COM3",
+    "baudrate": 115200,
+    "bytes_rx": 0,
+    "bytes_tx": 0,
+    "packets_rx": 0,
+    "lines_rx": 0,
+    "parse_errors": 0,
+    "last_rx_time": 0.0,
+    "last_raw_message": "",
+    "latest_telemetry": null,
+    "last_error": null,
+    "last_led_command_sent": "ALL_OFF",
+    "last_led_ack_status": "IDLE",
+    "has_physical_optical_feedback": false
+  },
+  "test2_telemetry_count": 5,
+  "test2_lines_rx": 5,
+  "test2_bytes_rx": 160,
+  "test2_last_raw": "DATA,TEMP=25,HUM=57,DIST=-1.00",
+  "test2_sample_records": [
+    {
+      "type": "TELEMETRY",
+      "temperature": 25.0,
+      "humidity": 57.0,
+      "distance": -1.0,
+      "sensor_validity": false,
+      "raw_message": "DATA,TEMP=25,HUM=57,DIST=-1.00",
+      "timestamp": 1793398823.9262714,
+      "data_source": "REAL_HARDWARE"
+    },
+    {
+      "type": "TELEMETRY",
+      "temperature": 25.0,
+      "humidity": 57.0,
+      "distance": -1.0,
+      "sensor_validity": false,
+      "raw_message": "DATA,TEMP=25,HUM=57,DIST=-1.00",
+      "timestamp": 1793398824.903973,
+      "data_source": "REAL_HARDWARE"
+    },
+    {
+      "type": "TELEMETRY",
+      "temperature": 25.0,
+      "humidity": 57.0,
+      "distance": -1.0,
+      "sensor_validity": false,
+      "raw_message": "DATA,TEMP=25,HUM=57,DIST=-1.00",
+      "timestamp": 1793398825.8929927,
+      "data_source": "REAL_HARDWARE"
+    }
+  ],
+  "test3_stored_count": 5,
+  "test3_latest_rows": [
+    {
+      "id": 17677,
+      "timestamp": "2026-10-30T22:20:27.897095",
+      "temp": 25.0,
+      "hum": 57.0,
+      "dist": -1.0,
+      "data_source": "REAL_HARDWARE",
+      "raw_message": "DATA,TEMP=25,HUM=57,DIST=-1.00"
+    },
+    {
+      "id": 17676,
+      "timestamp": "2026-10-30T22:20:27.896742",
+      "temp": 25.0,
+      "hum": 57.0,
+      "dist": -1.0,
+      "data_source": "REAL_HARDWARE",
+      "raw_message": "DATA,TEMP=25,HUM=57,DIST=-1.00"
+    },
+    {
+      "id": 17675,
+      "timestamp": "2026-10-30T22:20:27.896686",
+      "temp": 25.0,
+      "hum": 57.0,
+      "dist": -1.0,
+      "data_source": "REAL_HARDWARE",
+      "raw_message": "DATA,TEMP=25,HUM=57,DIST=-1.00"
+    },
+    {
+      "id": 17674,
+      "timestamp": "2026-10-30T22:20:27.896636",
+      "temp": 25.0,
+      "hum": 57.0,
+      "dist": -1.0,
+      "data_source": "REAL_HARDWARE",
+      "raw_message": "DATA,TEMP=25,HUM=57,DIST=-1.00"
+    },
+    {
+      "id": 17673,
+      "timestamp": "2026-10-30T22:20:27.896540",
+      "temp": 25.0,
+      "hum": 57.0,
+      "dist": -1.0,
+      "data_source": "REAL_HARDWARE",
+      "raw_message": "DATA,TEMP=25,HUM=57,DIST=-1.00"
+    }
+  ],
+  "test4_ml_prediction": {
+    "status": "SENSOR_FAULT",
+    "predicted_label": "SENSOR_FAULT",
+    "confidence": 1.0,
+    "anomaly_score": 0.98,
+    "is_anomaly": true,
+    "suggested_led": "LED:RED",
+    "actuator_led_state": "RED_ON",
+    "recommended_action": "Physical sensor invalid or out-of-range. Inspect LM35, DHT11 or HC-SR04 wiring.",
+    "model_id": "LAYER1_SAFETY_RULE",
+    "model_version": "1.0.0",
+    "data_source": "REAL_HARDWARE",
+    "feature_snapshot": {
+      "temperature": 25.0,
+      "humidity": 57.0,
+      "distance": -1.0,
+      "rolling_temp_mean": 25.0,
+      "rolling_temp_std": 0.0,
+      "temp_rate_of_change": 0.0,
+      "rolling_hum_mean": 57.0,
+      "rolling_hum_std": 0.0,
+      "hum_rate_of_change": 0.0,
+      "rolling_dist_mean": -1.0,
+      "rolling_dist_std": 0.0,
+      "dist_rate_of_change": 0.0,
+      "sensor_stability_score": 100.0
+    },
+    "layer1_override": true,
+    "reason": "Sensor readings outside physical hardware operating envelope."
+  },
+  "test5_simulation_model_compatibility": {
+    "total_model_features": 12,
+    "compatible_features_count": 8,
+    "missing_features_count": 4,
+    "compatibility_score_pct": 66.7,
+    "is_directly_compatible": false,
+    "recommendation": "Model expects dual-node inter-controller or actuator feedback features. A dedicated physical hardware model is recommended to prevent arbitrary imputation.",
+    "breakdown": [
+      {
+        "feature": "rolling_temp_mean",
+        "category": "MEASURED_OR_DERIVED_DIRECTLY",
+        "description": "Directly measured or computed from DHT11/LM35 and HC-SR04 telemetry."
+      },
+      {
+        "feature": "rolling_temp_std",
+        "category": "MEASURED_OR_DERIVED_DIRECTLY",
+        "description": "Directly measured or computed from DHT11/LM35 and HC-SR04 telemetry."
+      },
+      {
+        "feature": "temp_rate_of_change",
+        "category": "MEASURED_OR_DERIVED_DIRECTLY",
+        "description": "Directly measured or computed from DHT11/LM35 and HC-SR04 telemetry."
+      },
+      {
+        "feature": "rolling_dist_mean",
+        "category": "MEASURED_OR_DERIVED_DIRECTLY",
+        "description": "Directly measured or computed from DHT11/LM35 and HC-SR04 telemetry."
+      },
+      {
+        "feature": "dist_rate_of_change",
+        "category": "MEASURED_OR_DERIVED_DIRECTLY",
+        "description": "Directly measured or computed from DHT11/LM35 and HC-SR04 telemetry."
+      },
+      {
+        "feature": "target_temp_dev",
+        "category": "SUPERVISOR_SETPOINT_REFERENCE",
+        "description": "Derived from supervisor closed-loop targets (abs(actual - target))."
+      },
+      {
+        "feature": "target_dist_dev",
+        "category": "SUPERVISOR_SETPOINT_REFERENCE",
+        "description": "Derived from supervisor closed-loop targets (abs(actual - target))."
+      },
+      {
+        "feature": "latency_mean",
+        "category": "UNAVAILABLE_SINGLE_STM32_NODE",
+        "description": "Requires dual-node inter-microcontroller ping-pong or physical optical feedback."
+      },
+      {
+        "feature": "packet_loss_rate",
+        "category": "UNAVAILABLE_SINGLE_STM32_NODE",
+        "description": "Requires dual-node inter-microcontroller ping-pong or physical optical feedback."
+      },
+      {
+        "feature": "sensor_stability_score",
+        "category": "MEASURED_OR_DERIVED_DIRECTLY",
+        "description": "Directly measured or computed from DHT11/LM35 and HC-SR04 telemetry."
+      },
+      {
+        "feature": "response_delay",
+        "category": "UNAVAILABLE_SINGLE_STM32_NODE",
+        "description": "Requires dual-node inter-microcontroller ping-pong or physical optical feedback."
+      },
+      {
+        "feature": "led_mismatch",
+        "category": "UNAVAILABLE_SINGLE_STM32_NODE",
+        "description": "Requires dual-node inter-microcontroller ping-pong or physical optical feedback."
+      }
+    ]
+  },
+  "test5_dedicated_hardware_compatibility": {
+    "total_model_features": 13,
+    "compatible_features_count": 13,
+    "missing_features_count": 0,
+    "compatibility_score_pct": 100.0,
+    "is_directly_compatible": true,
+    "recommendation": "Model is fully compatible with physical STM32 telemetry.",
+    "breakdown": [
+      {
+        "feature": "temperature",
+        "category": "MEASURED_OR_DERIVED_DIRECTLY",
+        "description": "Directly measured or computed from DHT11/LM35 and HC-SR04 telemetry."
+      },
+      {
+        "feature": "humidity",
+        "category": "MEASURED_OR_DERIVED_DIRECTLY",
+        "description": "Directly measured or computed from DHT11/LM35 and HC-SR04 telemetry."
+      },
+      {
+        "feature": "distance",
+        "category": "MEASURED_OR_DERIVED_DIRECTLY",
+        "description": "Directly measured or computed from DHT11/LM35 and HC-SR04 telemetry."
+      },
+      {
+        "feature": "rolling_temp_mean",
+        "category": "MEASURED_OR_DERIVED_DIRECTLY",
+        "description": "Directly measured or computed from DHT11/LM35 and HC-SR04 telemetry."
+      },
+      {
+        "feature": "rolling_temp_std",
+        "category": "MEASURED_OR_DERIVED_DIRECTLY",
+        "description": "Directly measured or computed from DHT11/LM35 and HC-SR04 telemetry."
+      },
+      {
+        "feature": "temp_rate_of_change",
+        "category": "MEASURED_OR_DERIVED_DIRECTLY",
+        "description": "Directly measured or computed from DHT11/LM35 and HC-SR04 telemetry."
+      },
+      {
+        "feature": "rolling_hum_mean",
+        "category": "MEASURED_OR_DERIVED_DIRECTLY",
+        "description": "Directly measured or computed from DHT11/LM35 and HC-SR04 telemetry."
+      },
+      {
+        "feature": "rolling_hum_std",
+        "category": "MEASURED_OR_DERIVED_DIRECTLY",
+        "description": "Directly measured or computed from DHT11/LM35 and HC-SR04 telemetry."
+      },
+      {
+        "feature": "hum_rate_of_change",
+        "category": "MEASURED_OR_DERIVED_DIRECTLY",
+        "description": "Directly measured or computed from DHT11/LM35 and HC-SR04 telemetry."
+      },
+      {
+        "feature": "rolling_dist_mean",
+        "category": "MEASURED_OR_DERIVED_DIRECTLY",
+        "description": "Directly measured or computed from DHT11/LM35 and HC-SR04 telemetry."
+      },
+      {
+        "feature": "rolling_dist_std",
+        "category": "MEASURED_OR_DERIVED_DIRECTLY",
+        "description": "Directly measured or computed from DHT11/LM35 and HC-SR04 telemetry."
+      },
+      {
+        "feature": "dist_rate_of_change",
+        "category": "MEASURED_OR_DERIVED_DIRECTLY",
+        "description": "Directly measured or computed from DHT11/LM35 and HC-SR04 telemetry."
+      },
+      {
+        "feature": "sensor_stability_score",
+        "category": "MEASURED_OR_DERIVED_DIRECTLY",
+        "description": "Directly measured or computed from DHT11/LM35 and HC-SR04 telemetry."
+      }
+    ]
+  },
+  "test6_estop_override_led": "LED:OFF",
+  "test6_bytes_tx": 45,
+  "test7_dashboard_api_status": {
+    "status": "OFFLINE",
+    "serial": {
+      "is_connected": false,
+      "is_reconnecting": false,
+      "port": "COM3",
+      "baudrate": 115200,
+      "bytes_rx": 0,
+      "bytes_tx": 0,
+      "packets_rx": 0,
+      "lines_rx": 0,
+      "parse_errors": 0,
+      "last_rx_time": 0.0,
+      "last_raw_message": "",
+      "latest_telemetry": null,
+      "last_error": null,
+      "last_led_command_sent": "ALL_OFF",
+      "last_led_ack_status": "IDLE",
+      "has_physical_optical_feedback": false
+    },
+    "latest_telemetry": {
+      "timestamp": 1793398830.318897,
+      "node1_status": "ONLINE",
+      "node2_status": "ONLINE",
+      "target_temp": 25.0,
+      "actual_temp": 24.5,
+      "target_dist": 25.0,
+      "actual_dist": 25.0,
+      "target_motor_speed": 0,
+      "actual_motor_speed": 0,
+      "target_servo_angle": 90,
+      "actual_servo_angle": 90,
+      "comm_latency_ms": 14.2,
+      "fault_code": 0,
+      "is_simulated": true,
+      "led_state": "GREEN_ON",
+      "led_feedback_mode": "OPEN_LOOP",
+      "led_feedback_type": "SOFTWARE_COMMAND_ACK",
+      "has_physical_optical_feedback": false,
+      "data_source": "SIMULATION"
+    },
+    "latest_prediction": {
+      "predicted_label": "NORMAL_OPERATION",
+      "confidence": 0.99,
+      "anomaly_score": 0.01,
+      "is_anomaly": false,
+      "suggested_led": "GREEN_ON",
+      "fault_type": "NOMINAL",
+      "recommended_action": "System operating nominally.",
+      "data_source": "SIMULATION"
+    },
+    "active_led_state": "GREEN_ON",
+    "simulation_mode": true,
+    "provenance": "SIMULATION"
+  },
+  "test7_dashboard_api_predictions_count": 5,
+  "test7_dashboard_api_sample_prediction": {
+    "id": 22,
+    "timestamp": "2026-10-30T22:20:28.040386",
+    "model_id": "LAYER1_SAFETY_RULE",
+    "predicted_label": "SENSOR_FAULT",
+    "confidence": 1.0,
+    "anomaly_score": 0.98,
+    "is_anomaly": true,
+    "data_source": "REAL_HARDWARE",
+    "features_used": {
+      "temperature": 25.0,
+      "humidity": 57.0,
+      "distance": -1.0,
+      "rolling_temp_mean": 25.0,
+      "rolling_temp_std": 0.0,
+      "temp_rate_of_change": 0.0,
+      "rolling_hum_mean": 57.0,
+      "rolling_hum_std": 0.0,
+      "hum_rate_of_change": 0.0,
+      "rolling_dist_mean": -1.0,
+      "rolling_dist_std": 0.0,
+      "dist_rate_of_change": 0.0,
+      "sensor_stability_score": 100.0
+    }
+  }
+}

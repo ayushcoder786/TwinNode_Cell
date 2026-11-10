@@ -1,0 +1,22 @@
+{
+  "condition_id": "EQ-15-09",
+  "name": "Engineering Condition EQ-15-09",
+  "status": "PENDING_CONFIRMATION",
+  "specification_version": "0.1-DRAFT",
+  "description": "Special engineering condition EQ-15-09 reserved for industrial client verification. The exact physical criteria, trigger thresholds, and actuation sequence have not yet been supplied by the engineering authority. This detection stub is active and non-blocking.",
+  "parameters": {
+    "enabled": false,
+    "confidence_threshold": 0.95,
+    "monitoring_channel": "RESERVED_CUSTOM_SENSING",
+    "trigger_window_ms": 500,
+    "sample_count": 10,
+    "user_notes": "Pending exact specification from system engineering team. Do not fabricate detection criteria."
+  },
+  "action_on_trigger": {
+    "severity": "WARNING",
+    "alert_operator": true,
+    "log_telemetry": true,
+    "emergency_stop": false,
+    "suggested_action": "Awaiting engineering confirmation. Verify EQ-15-09 parameter specification document."
+  }
+}

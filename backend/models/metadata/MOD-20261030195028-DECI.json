@@ -1,0 +1,120 @@
+{
+  "model_id": "MOD-20261030195028-DECI",
+  "model_name": "TwinNode_DecisionTree_1030_1950",
+  "model_version": "1.0.0",
+  "algorithm": "DecisionTree",
+  "algorithm_type": "SUPERVISED",
+  "training_date": "2026-10-30T19:50:28.378384+00:00",
+  "dataset_version": "DS-LATEST",
+  "feature_list": [
+    "rolling_temp_mean",
+    "rolling_temp_std",
+    "temp_rate_of_change",
+    "rolling_dist_mean",
+    "dist_rate_of_change",
+    "target_temp_dev",
+    "target_dist_dev",
+    "latency_mean",
+    "packet_loss_rate",
+    "sensor_stability_score",
+    "response_delay",
+    "led_mismatch"
+  ],
+  "hyperparameters": {},
+  "metrics": {
+    "accuracy": 0.9818,
+    "precision_macro": 0.5543,
+    "recall_macro": 0.6194,
+    "f1_macro": 0.5735,
+    "f1_weighted": 0.9862,
+    "test_samples": 604,
+    "labels": [
+      "ACTUATOR_COMMAND_FAILURE",
+      "NORMAL_OPERATION",
+      "SENSOR_FAULT",
+      "UNEXPECTED_RESPONSE"
+    ],
+    "confusion_matrix": [
+      [
+        391,
+        7,
+        2,
+        0
+      ],
+      [
+        2,
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        200
+      ]
+    ],
+    "classification_report": {
+      "ACTUATOR_COMMAND_FAILURE": {
+        "precision": 0.9949109414758269,
+        "recall": 0.9775,
+        "f1-score": 0.9861286254728878,
+        "support": 400.0
+      },
+      "NORMAL_OPERATION": {
+        "precision": 0.2222222222222222,
+        "recall": 0.5,
+        "f1-score": 0.3076923076923077,
+        "support": 4.0
+      },
+      "SENSOR_FAULT": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 0.0
+      },
+      "UNEXPECTED_RESPONSE": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 200.0
+      },
+      "accuracy": 0.9817880794701986,
+      "macro avg": {
+        "precision": 0.5542832909245123,
+        "recall": 0.619375,
+        "f1-score": 0.5734552332912989,
+        "support": 604.0
+      },
+      "weighted avg": {
+        "precision": 0.9914789163563239,
+        "recall": 0.9817880794701986,
+        "f1-score": 0.9862288400992126,
+        "support": 604.0
+      }
+    },
+    "feature_importance": {
+      "rolling_temp_mean": 0.0807,
+      "rolling_temp_std": 0.0,
+      "temp_rate_of_change": 0.0014,
+      "rolling_dist_mean": 0.0449,
+      "dist_rate_of_change": 0.0,
+      "target_temp_dev": 0.1188,
+      "target_dist_dev": 0.4872,
+      "latency_mean": 0.0,
+      "packet_loss_rate": 0.0,
+      "sensor_stability_score": 0.0036,
+      "response_delay": 0.2634,
+      "led_mismatch": 0.0
+    },
+    "inference_latency_ms": 0.022
+  },
+  "artifact_path": "D:\\College\\Sem-4\\TwinNode-Cell\\backend\\models\\saved\\MOD-20261030195028-DECI.joblib",
+  "metadata_path": "D:\\College\\Sem-4\\TwinNode-Cell\\backend\\models\\metadata\\MOD-20261030195028-DECI.json"
+}
